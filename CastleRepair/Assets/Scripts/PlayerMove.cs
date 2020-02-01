@@ -19,7 +19,7 @@ public class PlayerMove : MonoBehaviour {
 
     private bool isDead;
 
-    private string hor, vert, rotx, roty;
+    private string hor, vert, rotx, roty, a, b, x, y;
 
     // Use this for initialization
     void Start()
@@ -41,14 +41,32 @@ public class PlayerMove : MonoBehaviour {
     private void SetPlayerControls()
     {
         //Use format p1_horizontal, p2_horizontal, so player number is used to set controls  
-        hor = "Horizontal" + playerNum.ToString();
-        vert = "Vertical" + playerNum.ToString();
-        rotx = "RotateX" + playerNum.ToString();
-        roty = "RotateY" + playerNum.ToString();
+        hor = SetInputString("Horizontal");
+        vert = SetInputString("Vertical");
+        rotx = SetInputString("RotateX");
+        roty = SetInputString("RotateY");
+        a = SetInputString("A");
+        b = SetInputString("B");
+        x = SetInputString("X");
+        y = SetInputString("Y");
+    }
+
+    /// <summary>Cleaner function for setting the string, it just sets it as "inputtype" + playernum</summary>
+    /// <param name="inputStart">Input Type String first part</param>
+    /// <returns>Input String in its entirety</returns>
+    private string SetInputString(string inputStart)
+    {
+        return inputStart + playerNum.ToString();
     }
 
     void FixedUpdate()
     {
+        if (Input.GetButtonDown(a)) print("Pressed " + a);
+        if (Input.GetButtonDown(b)) print("Pressed " + b);
+        if (Input.GetButtonDown(x)) print("Pressed " + x);
+        if (Input.GetButtonDown(y)) print("Pressed " + y);
+
+
         // If they are dead, freeze them (movement speed set to 0 if we want to switch to dead sprite)
         if (isDead == true)
         {
