@@ -32,7 +32,7 @@ public class PlayerHand : MonoBehaviour
         y = "Y" + playerNum.ToString();
 
         // update this as more cards added; this is how many of each card type is in deck
-        myDeck = new int[5] {3, 3, 1, 3, 3 };
+        myDeck = new int[8] {3, 3, 1, 3, 3, 3, 3, 3 };
         addManyCards(3);
     }
 

@@ -10,6 +10,8 @@ public class Knife : MonoBehaviour
     [SerializeField]
     private int owner; // Which player fired this knife
 
+    public bool pierce = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class Knife : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        if(pierce) if(!collision.gameObject.CompareTag("Player")) Destroy(gameObject);
+        else Destroy(gameObject);
     }
 }
