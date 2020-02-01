@@ -47,7 +47,9 @@ public class PlayerHand : MonoBehaviour
             }
             else if (activeCardCount == maxCardCount)
             {
+                Debug.Log(gameObject.name + " is ready");
                 ready = true;
+                PlayManager.inst.readyPlayers++;
                 // changes some ui
             }
         }
