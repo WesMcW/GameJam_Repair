@@ -20,6 +20,8 @@ public class PlayerProperties : MonoBehaviour
 
     TextMeshProUGUI pointsTxt, scoreTxt, levelTxt;
 
+    public bool ignoreMe;
+
     // Start is called before the first frame update INITIALIZATION
     void Start()
     {
@@ -36,14 +38,17 @@ public class PlayerProperties : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        if (PlayManager.inst.handPhase)
+        if (!ignoreMe)
         {
-            if (pointsTxt == null) SetText();
-            else
+            if (PlayManager.inst.handPhase)
             {
-                pointsTxt.text = "Points: " + points;
-                scoreTxt.text = "Score: " + score;
-                levelTxt.text = "Level: " + level;
+                if (pointsTxt == null) SetText();
+                else
+                {
+                    pointsTxt.text = "Points: " + points;
+                    scoreTxt.text = "Score: " + score;
+                    levelTxt.text = "Level: " + level;
+                }
             }
         }
     }
