@@ -787,6 +787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1796627706}
   - component: {fileID: 1796627705}
+  - component: {fileID: 1796627707}
   m_Layer: 0
   m_Name: Grass
   m_TagString: Untagged
@@ -857,6 +858,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1796627707
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796627704}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -7.6970735, y: 4.306451}
+  - {x: 7.672318, y: 4.3118896}
+  - {x: 7.67603, y: -4.3166366}
+  - {x: -7.6671686, y: -4.31537}
+  - {x: -7.662529, y: 4.352246}
 --- !u!1001 &1162031516928888193
 PrefabInstance:
   m_ObjectHideFlags: 0
