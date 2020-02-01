@@ -86,7 +86,6 @@ public class PlayerMove : MonoBehaviour {
             }
         }
 
-
         // If they are dead, freeze them (movement speed set to 0 if we want to switch to dead sprite)
         if (isDead == true)
         {
@@ -132,5 +131,4 @@ public class PlayerMove : MonoBehaviour {
             Physics2D.IgnoreCollision(clone.GetComponent<BoxCollider2D>(), myCollider);
         }
     }
-
 }
