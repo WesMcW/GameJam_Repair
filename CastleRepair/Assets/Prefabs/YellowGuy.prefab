@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7688309496622690134}
   - component: {fileID: 2050383984}
   - component: {fileID: 2050383981}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: YellowGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,6 +123,8 @@ MonoBehaviour:
   playerNum: 4
   movementSpeed: 0
   knife: {fileID: 1392192985621031228, guid: a72ade4178bd3d94898f4053ecc12ae5, type: 3}
+  resetCD: 0.5
+  multiShot: 0
 --- !u!114 &-8958542887551042446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7681570791068630075}
   - component: {fileID: 7707087562008094024}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlaceholderCrosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3914760929782111562}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CrosshairHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

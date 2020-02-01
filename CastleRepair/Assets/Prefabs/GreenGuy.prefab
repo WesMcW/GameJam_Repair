@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6275594065248761703}
   - component: {fileID: 1954471144}
   - component: {fileID: 1954471141}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GreenGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,6 +123,8 @@ MonoBehaviour:
   playerNum: 3
   movementSpeed: 0
   knife: {fileID: 1392192985621031228, guid: a72ade4178bd3d94898f4053ecc12ae5, type: 3}
+  resetCD: 0.5
+  multiShot: 0
 --- !u!114 &5620801190458203333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3639802017331142448}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CrosshairHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6417025270190486066}
   - component: {fileID: 720444656025367399}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlaceholderCrosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}

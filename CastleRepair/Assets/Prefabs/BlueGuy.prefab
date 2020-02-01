@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2279948490004463512}
   - component: {fileID: 805769167362898256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlaceholderCrosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5611264954300572498}
   - component: {fileID: -8177114771458685405}
   - component: {fileID: 6109385668799811292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,6 +203,8 @@ MonoBehaviour:
   playerNum: 1
   movementSpeed: 0
   knife: {fileID: 1392192985621031228, guid: a72ade4178bd3d94898f4053ecc12ae5, type: 3}
+  resetCD: 0.5
+  multiShot: 0
 --- !u!114 &-3871902811360059101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 186568595241551267}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CrosshairHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5851210334782681003}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CrosshairHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: -5769066498135954510}
   - component: {fileID: 353961405}
   - component: {fileID: 353961402}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,6 +154,8 @@ MonoBehaviour:
   playerNum: 2
   movementSpeed: 0
   knife: {fileID: 1392192985621031228, guid: a72ade4178bd3d94898f4053ecc12ae5, type: 3}
+  resetCD: 0.5
+  multiShot: 0
 --- !u!114 &6084214312161538999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8272797952402187693}
   - component: {fileID: 8780776962620676201}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlaceholderCrosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
