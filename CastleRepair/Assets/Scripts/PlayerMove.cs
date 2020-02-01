@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviour {
 
     private Rigidbody2D myRigidBody;
 
-    private float movementSpeed;
+    public float movementSpeed;
 
     private bool isDead;
 
