@@ -21,6 +21,9 @@ public class PlayerMove : MonoBehaviour {
 
     private string hor, vert, rotx, roty, a, b, x, y, shoot;
 
+    [SerializeField]
+    private GameObject knife;
+
     // Use this for initialization
     void Start()
     {
@@ -101,6 +104,8 @@ public class PlayerMove : MonoBehaviour {
     private void Shoot()
     {
         print(playerNum + " is firing");
+        GameObject clone = Instantiate(knife, transform.position, transform.rotation);
+        // Knife needs velocity on its own script
     }
 
 }
