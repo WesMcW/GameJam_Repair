@@ -50,7 +50,7 @@ public class PlayerProperties : MonoBehaviour
         return unspent_pts;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Knife")
         {
@@ -61,8 +61,7 @@ public class PlayerProperties : MonoBehaviour
                 isDead = true;
             }
         }
-
-    } //end collision event
+    }
 
     public void equipCard(Card card)
     {   //call for each card being activated
