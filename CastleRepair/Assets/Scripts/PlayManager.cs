@@ -13,8 +13,10 @@ public class PlayManager : MonoBehaviour
     public bool inGame = false;
     bool handPhase = false;
 
+    int playerCount;
     int currentMap = -1;
     int winPoints;
+    public int readyPlayers = 0;
 
     public GameObject[] Maps;
     public GameObject[] Players;
@@ -32,7 +34,9 @@ public class PlayManager : MonoBehaviour
     void Start()
     {
         deleteCards = new List<GameObject>();
-        PlayerPrefs.SetInt(PlayerPrefsPlayerCount, 2);
+        //PlayerPrefs.SetInt(PlayerPrefsPlayerCount, 2);
+
+        playerCount = PlayerPrefs.GetInt(PlayerPrefsPlayerCount);
 
         Players = new GameObject[PlayerPrefs.GetInt(PlayerPrefsPlayerCount)];
         for (int i = 0; i < PlayerPrefs.GetInt(PlayerPrefsPlayerCount); i++)
@@ -42,6 +46,7 @@ public class PlayManager : MonoBehaviour
             temp.GetComponent<PlayerHand>().handSpot = CardScreen.transform.GetChild(i).gameObject;
         }
         SetMap();
+        handPhase = true;
     }
 
     void Update()
@@ -49,6 +54,17 @@ public class PlayManager : MonoBehaviour
         if (handPhase)
         {
             // check if all players are ready, if all ready start game
+            if(readyPlayers == playerCount)
+            {
+                Debug.Log("All players ready!");
+
+                handPhase = false;
+                CardScreen.SetActive(false);
+                foreach (GameObject p in Players) p.GetComponent<SpriteRenderer>().enabled = true;
+
+                // start a countdown
+                Invoke("StartBattle", 5F);
+            }
         }
     }
 
@@ -62,6 +78,8 @@ public class PlayManager : MonoBehaviour
         CardScreen.SetActive(true);
         SetMap();
 
+        readyPlayers = 0;
+
         // enable player ui functions (picking cards & spending points)
         // when player pushes [ready button] ready bool = true
         // if all players have ready = true, game starts || in update, constantly checks if all players are reaady
@@ -69,13 +87,15 @@ public class PlayManager : MonoBehaviour
 
     public void StartBattle()
     {
-        foreach (GameObject p in Players) p.SetActive(true);
+        Debug.Log("Starting Match!");
+
+        //foreach (GameObject p in Players) p.SetActive(true);
         foreach (GameObject a in deleteCards) Destroy(a);   // destroy all used cards
 
         foreach (GameObject p in Players)
         {
-            p.GetComponent<SpriteRenderer>().enabled = true;
-            //p.GetComponent<PlayerMove>().enabled = true;
+            //p.GetComponent<SpriteRenderer>().enabled = true;
+            p.GetComponent<PlayerMove>().enabled = true;
             p.GetComponent<PlayerHand>().enabled = false;
         }
 
@@ -84,6 +104,8 @@ public class PlayManager : MonoBehaviour
 
     void SetMap()
     {
+        Debug.Log("Setting New Map...");
+
         // pick new map and set spawnpoints
         // ** currently disables all players, can be changed
         if(currentMap != -1) Maps[currentMap].SetActive(false);
@@ -98,6 +120,7 @@ public class PlayManager : MonoBehaviour
         Maps[currentMap].SetActive(true);
 
         winPoints = Random.Range(1, 4);
+        Debug.Log("Win points this match: " + winPoints);
 
         // place players in their spawnpoints
         for (int i = 0; i < Players.Length; i++)
