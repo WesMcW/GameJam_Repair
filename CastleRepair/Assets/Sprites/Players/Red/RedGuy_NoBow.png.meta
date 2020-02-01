@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: 3394845747e0abe44ae42602b274484c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -174262249342690739
+    second: RedGuy_idle_1
+  - first:
+      213: -6245409752059315050
+    second: RedGuy_idle_2
+  - first:
+      213: 2692474879762690595
+    second: RedGuy_idle_3
+  - first:
+      213: 5653897115710927642
+    second: RedGuy_idle_4
+  - first:
+      213: -6977851305488822304
+    second: RedGuy_NoBow_4
+  - first:
+      213: 894593986554450393
+    second: RedGuy_NoBow_5
+  - first:
+      213: 5174534933360633416
+    second: RedGuy_NoBow_6
+  - first:
+      213: 7600129347482359150
+    second: RedGuy_NoBow_7
+  - first:
+      213: 2486457505786462783
+    second: RedGuy_NoBow_8
+  - first:
+      213: 4352903238731863003
+    second: RedGuy_NoBow_9
+  - first:
+      213: 1103508615741174899
+    second: RedGuy_NoBow_10
+  - first:
+      213: -7547463654313104246
+    second: RedGuy_NoBow_11
+  - first:
+      213: 6087088064513608926
+    second: RedGuy_NoBow_12
+  - first:
+      213: -8936783759613507868
+    second: RedGuy_NoBow_13
+  - first:
+      213: -2716874447598233974
+    second: RedGuy_NoBow_14
+  - first:
+      213: 2486135214230354220
+    second: RedGuy_NoBow_15
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RedGuy_idle_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1302
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0de66f5756bea4ab3781098ffb01a3
+      internalID: -174262249342690739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_idle_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1302
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb497733d83b2840a3dbc04628bbe69
+      internalID: -6245409752059315050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_idle_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1302
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9a02e336df0ab458fb79e5fda4204c
+      internalID: 2692474879762690595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_idle_4
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1302
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7e0afd105a5e24c81b31373a19ed74
+      internalID: 5653897115710927642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_4
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1104
+        width: 84
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7a33d1a39d8144e8ff0df649cdc61d
+      internalID: -6977851305488822304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_5
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 1104
+        width: 84
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc64fe15d96d0f478a947c81bebb5d3
+      internalID: 894593986554450393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_6
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1104
+        width: 84
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f509100f0e4f6be45817260948335cb6
+      internalID: 5174534933360633416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_7
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1104
+        width: 84
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618de782809fd1e43a8719ea81f11182
+      internalID: 7600129347482359150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_8
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 870
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d7722f876c48a4bb015e434731c7a6
+      internalID: 2486457505786462783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_9
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 870
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4dee855d4704214da9cc831e25a832a
+      internalID: 4352903238731863003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_10
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 870
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f55b820512d9f44adf588717f86af0
+      internalID: 1103508615741174899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_11
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 870
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a45cd21539e934daec758b441d4fa7
+      internalID: -7547463654313104246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_12
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 618
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3428046c8886e4e9f4191f04ab84b3
+      internalID: 6087088064513608926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_13
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 618
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930fa6d9d3d091343aafa2d94bbe407e
+      internalID: -8936783759613507868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_14
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 618
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d73819369f1694aa94cdcc8a2600ba
+      internalID: -2716874447598233974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGuy_NoBow_15
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 618
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a48622713a9b1040bacbed4cf068a1b
+      internalID: 2486135214230354220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

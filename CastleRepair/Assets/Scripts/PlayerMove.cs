@@ -19,7 +19,7 @@ public class PlayerMove : MonoBehaviour {
 
     private bool isDead;
 
-    private string hor, vert, rotx, roty, a, b, x, y;
+    private string hor, vert, rotx, roty, a, b, x, y, shoot;
 
     Animator anim;
 
@@ -48,7 +48,7 @@ public class PlayerMove : MonoBehaviour {
         vert = SetInputString("Vertical");
         rotx = SetInputString("RotateX");
         roty = SetInputString("RotateY");
-        
+        shoot = SetInputString("Fire");
     }
 
     /// <summary>Cleaner function for setting the string, it just sets it as "inputtype" + playernum</summary>
@@ -61,10 +61,11 @@ public class PlayerMove : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (Input.GetButtonDown(a)) print("Pressed " + a);
-        if (Input.GetButtonDown(b)) print("Pressed " + b);
-        if (Input.GetButtonDown(x)) print("Pressed " + x);
-        if (Input.GetButtonDown(y)) print("Pressed " + y);
+
+        if (Input.GetAxis(shoot) > 0)
+        {
+            Shoot();
+        }
 
 
         // If they are dead, freeze them (movement speed set to 0 if we want to switch to dead sprite)
@@ -103,6 +104,11 @@ public class PlayerMove : MonoBehaviour {
             float angle = Mathf.Atan2(x, y) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(90 - angle, Vector3.forward);
         }
+    }
+
+    private void Shoot()
+    {
+        print(playerNum + " is firing");
     }
 
 }
