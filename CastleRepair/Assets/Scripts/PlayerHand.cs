@@ -11,7 +11,9 @@ public class PlayerHand : MonoBehaviour
     public int activeCardCount = 0;
     public int maxCardCount = 1;
 
-    public GameObject handSpot;
+    public GameObject handImg;
+    GameObject cardSpot;
+
     public List<GameObject> myHand;
     public GameObject[] CardPrefs;
     int[] myDeck;   // [MoveSpeedCard, BarrierCard, ...]
@@ -81,7 +83,8 @@ public class PlayerHand : MonoBehaviour
 
         // instantiate new card in the hand, put it in the hand, subtract from the deck
         GameObject newCard = Instantiate(CardPrefs[rand]);
-        newCard.transform.SetParent(handSpot.transform);
+        if (cardSpot == null) cardSpot = handImg.transform.GetChild(0).gameObject;
+        else newCard.transform.SetParent(cardSpot.transform);
         myHand.Add(newCard);
         myDeck[rand]--;
     }

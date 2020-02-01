@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerProperties : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class PlayerProperties : MonoBehaviour
     public int points = 0;
     public int score = 0;
 
+    Text pointsTxt, scoreTxt, levelTxt;
+
     // Start is called before the first frame update INITIALIZATION
     void Start()
     {
@@ -30,6 +33,13 @@ public class PlayerProperties : MonoBehaviour
         if (isDead == true)
         {
             gameObject.SetActive(false);
+        }
+
+        if (PlayManager.inst.handPhase && pointsTxt != null)
+        {
+            pointsTxt.text = "Points: " + points;
+            pointsTxt.text = "Score: " + score;
+            pointsTxt.text = "Level: " + level;
         }
     }
 
@@ -94,5 +104,13 @@ public class PlayerProperties : MonoBehaviour
 
             // check for win
         }
+    }
+
+    public void SetText()
+    {
+        GameObject tempHand = GetComponent<PlayerHand>().handImg;
+        pointsTxt = tempHand.transform.GetChild(2).GetComponent<Text>();
+        scoreTxt = tempHand.transform.GetChild(3).GetComponent<Text>();
+        levelTxt = tempHand.transform.GetChild(4).GetComponent<Text>();
     }
 }

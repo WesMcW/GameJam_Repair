@@ -11,7 +11,7 @@ public class PlayManager : MonoBehaviour
     static string PlayerPrefsPlayerCount = "PlayerCount";
 
     public bool inGame = false;
-    bool handPhase = false;
+    public bool handPhase = false;
 
     int playerCount;
     int currentMap = -1;
@@ -43,10 +43,12 @@ public class PlayManager : MonoBehaviour
         {
             GameObject temp = Instantiate(PlayerPrefabs[i]);
             Players[i] = temp;
-            temp.GetComponent<PlayerHand>().handSpot = CardScreen.transform.GetChild(i).gameObject;
+            temp.GetComponent<PlayerHand>().handImg = CardScreen.transform.GetChild(i).gameObject;
         }
         SetMap();
         handPhase = true;
+
+        Invoke("SetText", 0.1F);
     }
 
     void Update()
@@ -133,5 +135,13 @@ public class PlayManager : MonoBehaviour
         }
 
         for (int i = 0; i < Players.Length; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
+    }
+
+    void SetText()
+    {
+        foreach(GameObject p in Players)
+        {
+            p.GetComponent<PlayerProperties>().SetText();
+        }
     }
 }
