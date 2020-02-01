@@ -177,6 +177,8 @@ MonoBehaviour:
   - {fileID: 2866509890180660873, guid: 373bec585ba77764db9f6c2497c8fc8f, type: 3}
   - {fileID: 5890531280356816385, guid: a8db23c9b35560b46a3a13212c534214, type: 3}
   - {fileID: 4642333506202468322, guid: 26cfd79f8a7bc2943ac801e8224ab049, type: 3}
+  - {fileID: 393569909151538385, guid: e79b13f199b675745bf2a32aeea27c80, type: 3}
+  - {fileID: 8084290111427590886, guid: 1a55233301bb10e42b44f3a976297f31, type: 3}
 --- !u!61 &7914380462503819647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -215,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85a5c2891c75a54e8cf81e40ef1838c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   xp: 0
   level: 1
   points: 0
