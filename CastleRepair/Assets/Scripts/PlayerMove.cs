@@ -18,6 +18,8 @@ public class PlayerMove : MonoBehaviour {
 
     private BoxCollider2D myCollider;
 
+    private Animator anim;
+
     public float movementSpeed;
 
     private bool isDead;
@@ -40,6 +42,7 @@ public class PlayerMove : MonoBehaviour {
         SetPlayerControls();
         movementSpeed = 5f;
         canFire = true;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -86,7 +89,6 @@ public class PlayerMove : MonoBehaviour {
             }
         }
 
-
         // If they are dead, freeze them (movement speed set to 0 if we want to switch to dead sprite)
         if (isDead == true)
         {
@@ -102,6 +104,19 @@ public class PlayerMove : MonoBehaviour {
 
             myRigidBody.velocity = new Vector2(horizontal * movementSpeed, myRigidBody.velocity.y);
             myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, vertical * movementSpeed);
+
+            //Flip sprite
+            if(horizontal > 0)
+            {
+                transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+            }
+            else
+            {
+                transform.rotation = Quaternion.identity;
+            }
+
+            anim.SetFloat("Hor", horizontal);
+            anim.SetFloat("Vert", vertical);
         }
     }
 
@@ -132,5 +147,4 @@ public class PlayerMove : MonoBehaviour {
             Physics2D.IgnoreCollision(clone.GetComponent<BoxCollider2D>(), myCollider);
         }
     }
-
 }
