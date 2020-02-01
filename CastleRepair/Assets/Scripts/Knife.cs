@@ -7,6 +7,9 @@ public class Knife : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    [SerializeField]
+    private int owner; // Which player fired this knife
+
     // Start is called before the first frame update
     void Start()
     {
