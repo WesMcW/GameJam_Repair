@@ -7,6 +7,9 @@ public class PlayerMove : MonoBehaviour {
     [SerializeField]
     private int playerNum;
 
+    [SerializeField]
+    private GameObject knife;
+
     /*
      // If needed, a sprite that shows them dead
     [SerializeField]
@@ -84,10 +87,10 @@ public class PlayerMove : MonoBehaviour {
             myRigidBody.velocity = new Vector2(horizontal * movementSpeed, myRigidBody.velocity.y);
             myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, vertical * movementSpeed);
 
-            if (horizontal < 0) transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+            if (horizontal > 0) transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
             else transform.rotation = Quaternion.identity;
-            anim.SetFloat("horiz", horizontal);
-            anim.SetFloat("verti", vertical);
+            anim.SetFloat("Hor", horizontal);
+            anim.SetFloat("Vert", vertical);
         }
     }
 
@@ -109,6 +112,8 @@ public class PlayerMove : MonoBehaviour {
     private void Shoot()
     {
         print(playerNum + " is firing");
+        GameObject clone = Instantiate(knife, transform.position, transform.rotation);
+        // Knife needs velocity on its own script
     }
 
 }
