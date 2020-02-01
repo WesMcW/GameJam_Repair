@@ -125,7 +125,7 @@ MonoBehaviour:
   knife: {fileID: 9093957123481721042, guid: 09e4cf05a8abcac4283fae10219bb4a6, type: 3}
   resetCD: 0.5
   multiShot: 0
-  pierceShot: 0
+  pierceShot: 1
 --- !u!114 &-8958542887551042446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   level: 1
   points: 0
   score: 0
-  ignoreMe: 0
+  ignoreMe: 1
 --- !u!50 &2050383984
 Rigidbody2D:
   serializedVersion: 4
