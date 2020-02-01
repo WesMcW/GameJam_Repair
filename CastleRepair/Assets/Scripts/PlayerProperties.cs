@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerProperties : MonoBehaviour
 {
+    List<Card> active_cards;
     // This will track health and be attached to player objects. gameObject refers to what this script is attached to.
-    int unspent_pts;
-    int health = 100;
+    private int unspent_pts;
+    private int health = 100;
+    public int move_speed = 5; // Arbitrary value for now. Just created a place in memory for it
     bool isDead;
-    List<Card> active_cards; // !!replace GameObject with Card when committted
-
+    
     // Start is called before the first frame update INITIALIZATION
     void Start()
     {
@@ -21,7 +22,17 @@ public class PlayerProperties : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isDead == true)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+
+    int award_points(int pts)
+    {   // Awards points to parents 
+        unspent_pts += pts;
+        return unspent_pts;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -33,13 +44,12 @@ public class PlayerProperties : MonoBehaviour
             if (health <= 0) // by default player will instantly die
             {
                 isDead = true;
-                gameObject.SetActive(false);
-            } 
+            }
         }
-        
+
     } //end collision event
 
-    public void equipCard( Card card )
+    public void equipCard(Card card)
     {   //call for each card being activated
 
         active_cards.Add(card);
@@ -47,7 +57,7 @@ public class PlayerProperties : MonoBehaviour
 
     public void resetCards()
     {
-        foreach(Card a in active_cards)
+        foreach (Card a in active_cards)
         {
             a.setCardUnactivate(gameObject);
             active_cards.Remove(a);

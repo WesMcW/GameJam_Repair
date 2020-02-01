@@ -45,10 +45,7 @@ public class PlayerMove : MonoBehaviour {
         vert = SetInputString("Vertical");
         rotx = SetInputString("RotateX");
         roty = SetInputString("RotateY");
-        a = SetInputString("A");
-        b = SetInputString("B");
-        x = SetInputString("X");
-        y = SetInputString("Y");
+        
     }
 
     /// <summary>Cleaner function for setting the string, it just sets it as "inputtype" + playernum</summary>
