@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 6109385668799811292}
   m_Layer: 8
   m_Name: BlueGuy
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,6 +206,7 @@ MonoBehaviour:
   knife: {fileID: 12063720034261493, guid: be347ce39d6c1bd4ea7f2cbea87a9669, type: 3}
   resetCD: 0.5
   multiShot: 0
+  pierceShot: 0
 --- !u!114 &-3871902811360059101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +230,9 @@ MonoBehaviour:
   - {fileID: 4642333506202468322, guid: 26cfd79f8a7bc2943ac801e8224ab049, type: 3}
   - {fileID: 393569909151538385, guid: e79b13f199b675745bf2a32aeea27c80, type: 3}
   - {fileID: 8084290111427590886, guid: 1a55233301bb10e42b44f3a976297f31, type: 3}
+  - {fileID: 5988707987198443180, guid: c0a0d552feae2f2478572f93f94c3281, type: 3}
+  - {fileID: 6676924409627968367, guid: c9883e242751b3d4a85f0567b11841fc, type: 3}
+  - {fileID: 2804785811172212569, guid: ebbe9ce21732d92489c1adae4dfd2f9f, type: 3}
 --- !u!50 &6109385668940460535
 Rigidbody2D:
   serializedVersion: 4
