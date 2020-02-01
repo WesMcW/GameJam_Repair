@@ -8,12 +8,12 @@ public class PlayerProperties : MonoBehaviour
     int unspent_pts;
     int health = 100;
     bool isDead;
-    List<GameObject> active_cards; // !!replace GameObject with Card when committted
+    List<Card> active_cards; // !!replace GameObject with Card when committted
 
     // Start is called before the first frame update INITIALIZATION
     void Start()
     {
-        active_cards = new List<GameObject>();
+        active_cards = new List<Card>();
         isDead = false;
         unspent_pts = 0;
     }
@@ -39,10 +39,18 @@ public class PlayerProperties : MonoBehaviour
         
     } //end collision event
 
-    void equipCard( GameObject card )
+    public void equipCard( Card card )
     {   //call for each card being activated
 
         active_cards.Add(card);
     }
 
+    public void resetCards()
+    {
+        foreach(Card a in active_cards)
+        {
+            a.setCardUnactivate(gameObject);
+            active_cards.Remove(a);
+        }
+    }
 }

@@ -8,9 +8,8 @@ public class SpeedUpgrade : Card
 
     public override void setCardActive(GameObject myPlayer)
     {
+        if(!isActive) myPlayer.GetComponent<PlayerMove>().movementSpeed *= 1.5F;
         isActive = true;
-
-        myPlayer.GetComponent<PlayerMove>().movementSpeed *= 1.5F;
     }
 
     public override void setCardUnactivate(GameObject myPlayer)

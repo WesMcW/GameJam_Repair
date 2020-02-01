@@ -18,8 +18,11 @@ public class PlayManager : MonoBehaviour
     public GameObject CardScreen;
     public GameObject[] PlayerPrefabs;
 
+    public List<GameObject> deleteCards;
+
     void Start()
     {
+        deleteCards = new List<GameObject>();
         PlayerPrefs.SetInt(PlayerPrefsPlayerCount, 2);
 
         Players = new GameObject[PlayerPrefs.GetInt(PlayerPrefsPlayerCount)];
@@ -55,6 +58,7 @@ public class PlayManager : MonoBehaviour
     public void StartBattle()
     {
         foreach (GameObject p in Players) p.SetActive(true);
+        foreach (GameObject a in deleteCards) Destroy(a);   // destroy all used cards
 
         // disables ui card controls, enables gameplay controls, maybe has a countdown until game start
     }
