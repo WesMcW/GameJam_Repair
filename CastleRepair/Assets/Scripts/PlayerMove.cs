@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 
-    [SerializeField]
     public int playerNum;
+
+    private GameObject crosshairHolder; // The object on the center of the player that controls crosshair placement
 
     /*
      // If needed, a sprite that shows them dead
@@ -14,6 +15,8 @@ public class PlayerMove : MonoBehaviour {
     */
 
     private Rigidbody2D myRigidBody;
+
+    private BoxCollider2D myCollider;
 
     public float movementSpeed;
 
@@ -31,6 +34,9 @@ public class PlayerMove : MonoBehaviour {
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
+        myCollider = GetComponent<BoxCollider2D>();
+        crosshairHolder = transform.GetChild(0).gameObject;
+        Debug.Assert(crosshairHolder != null); // Checks to ensure it's not null
         SetPlayerControls();
         movementSpeed = 5f;
         canFire = true;
@@ -110,7 +116,7 @@ public class PlayerMove : MonoBehaviour {
         if (x != 0.0 || y != 0.0)
         {
             float angle = Mathf.Atan2(x, y) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(90 - angle, Vector3.forward);
+            crosshairHolder.transform.rotation = Quaternion.AngleAxis(90 - angle, Vector3.forward);
         }
     }
 
@@ -122,9 +128,9 @@ public class PlayerMove : MonoBehaviour {
         {
             canFire = false;
             fireCooldown = 0.5f;
-            GameObject clone = Instantiate(knife, transform.position, transform.rotation);
+            GameObject clone = Instantiate(knife, crosshairHolder.transform.position, crosshairHolder.transform.rotation);
+            Physics2D.IgnoreCollision(clone.GetComponent<BoxCollider2D>(), myCollider);
         }
-        // Knife needs velocity on its own script
     }
 
 }
