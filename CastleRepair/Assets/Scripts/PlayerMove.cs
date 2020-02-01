@@ -46,6 +46,7 @@ public class PlayerMove : MonoBehaviour {
         movementSpeed = 5f;
         canFire = true;
         anim = GetComponent<Animator>();
+        pierceShot = false;
     }
 
     // Update is called once per frame
