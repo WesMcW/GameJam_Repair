@@ -21,10 +21,13 @@ public class PlayerMove : MonoBehaviour {
 
     private string hor, vert, rotx, roty, a, b, x, y;
 
+    Animator anim;
+
     // Use this for initialization
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         SetPlayerControls();
         movementSpeed = 5f;
     }
@@ -79,6 +82,11 @@ public class PlayerMove : MonoBehaviour {
 
             myRigidBody.velocity = new Vector2(horizontal * movementSpeed, myRigidBody.velocity.y);
             myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, vertical * movementSpeed);
+
+            if (horizontal < 0) transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+            else transform.rotation = Quaternion.identity;
+            anim.SetFloat("horiz", horizontal);
+            anim.SetFloat("verti", vertical);
         }
     }
 
