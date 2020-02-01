@@ -5,6 +5,7 @@ using UnityEngine;
 public class DirectionalShield : Card
 {
     public GameObject shield;
+    GameObject myShield;
 
     public override void setCardActive(GameObject myPlayer)
     {
@@ -17,6 +18,8 @@ public class DirectionalShield : Card
 
     public override void setCardUnactivate(GameObject myPlayer)
     {
+        Destroy(myShield);
+
         isActive = false;
     }
 }
