@@ -150,14 +150,14 @@ public class PlayerMove : MonoBehaviour {
             if (!multiShot)
             {
                 GameObject clone = Instantiate(knife, crosshairHolder.transform.position, crosshairHolder.transform.rotation);
-                Physics2D.IgnoreCollision(clone.GetComponent<BoxCollider2D>(), myCollider[0]);
+                //Physics2D.IgnoreCollision(clone.GetComponent<BoxCollider2D>(), myCollider[0]);
             }
             else
             {
                 for (int i = -1; i < 2; i++)
                 {
                     GameObject clone = Instantiate(knife, crosshairHolder.transform.position, Quaternion.Euler(0, 0, crosshairHolder.transform.rotation.z + 20 * i));
-                    Physics2D.IgnoreCollision(clone.GetComponent<BoxCollider2D>(), myCollider[0]);
+                    //Physics2D.IgnoreCollision(clone.GetComponent<BoxCollider2D>(), myCollider[0]);
                     //GameObject newClone = Instantiate(knife, crosshairHolder.transform.position, Quaternion.Euler(new Vector3(0, 0, crosshairHolder.transform.rotation.z + 10)));
                 }
             }

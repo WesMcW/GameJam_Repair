@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNum: 2
   movementSpeed: 0
-  knife: {fileID: 1392192985621031228, guid: a72ade4178bd3d94898f4053ecc12ae5, type: 3}
+  knife: {fileID: 7321889302403390035, guid: f17062359e0eb1f4cb7e412588485f64, type: 3}
   resetCD: 0.5
   multiShot: 0
 --- !u!114 &6084214312161538999
@@ -201,7 +201,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.54, y: 1.26}
+  m_Size: {x: 0.54, y: 1.5}
   m_EdgeRadius: 0
 --- !u!114 &-5769066498135954510
 MonoBehaviour:
@@ -219,6 +219,7 @@ MonoBehaviour:
   level: 1
   points: 0
   score: 0
+  ignoreMe: 0
 --- !u!50 &353961405
 Rigidbody2D:
   serializedVersion: 4

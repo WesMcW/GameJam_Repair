@@ -202,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNum: 1
   movementSpeed: 0
-  knife: {fileID: 1392192985621031228, guid: a72ade4178bd3d94898f4053ecc12ae5, type: 3}
+  knife: {fileID: 12063720034261493, guid: be347ce39d6c1bd4ea7f2cbea87a9669, type: 3}
   resetCD: 0.5
   multiShot: 0
 --- !u!114 &-3871902811360059101
@@ -289,6 +289,7 @@ MonoBehaviour:
   level: 1
   points: 0
   score: 0
+  ignoreMe: 0
 --- !u!61 &6109385668799811292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -300,7 +301,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -313,7 +314,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.54, y: 1.26}
+  m_Size: {x: 0.54, y: 1.5}
   m_EdgeRadius: 0
 --- !u!1 &7145129180894037072
 GameObject:
