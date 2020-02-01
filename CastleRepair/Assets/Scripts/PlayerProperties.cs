@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerProperties : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PlayerProperties : MonoBehaviour
     public int points = 0;
     public int score = 0;
 
-    Text pointsTxt, scoreTxt, levelTxt;
+    TextMeshProUGUI pointsTxt, scoreTxt, levelTxt;
 
     // Start is called before the first frame update INITIALIZATION
     void Start()
@@ -35,11 +36,15 @@ public class PlayerProperties : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        if (PlayManager.inst.handPhase && pointsTxt != null)
+        if (PlayManager.inst.handPhase)
         {
-            pointsTxt.text = "Points: " + points;
-            pointsTxt.text = "Score: " + score;
-            pointsTxt.text = "Level: " + level;
+            if (pointsTxt == null) SetText();
+            else
+            {
+                pointsTxt.text = "Points: " + points;
+                scoreTxt.text = "Score: " + score;
+                levelTxt.text = "Level: " + level;
+            }
         }
     }
 
@@ -50,7 +55,7 @@ public class PlayerProperties : MonoBehaviour
         return unspent_pts;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Knife")
         {
@@ -61,8 +66,7 @@ public class PlayerProperties : MonoBehaviour
                 isDead = true;
             }
         }
-
-    } //end collision event
+    }
 
     public void equipCard(Card card)
     {   //call for each card being activated
@@ -109,8 +113,8 @@ public class PlayerProperties : MonoBehaviour
     public void SetText()
     {
         GameObject tempHand = GetComponent<PlayerHand>().handImg;
-        pointsTxt = tempHand.transform.GetChild(2).GetComponent<Text>();
-        scoreTxt = tempHand.transform.GetChild(3).GetComponent<Text>();
-        levelTxt = tempHand.transform.GetChild(4).GetComponent<Text>();
+        pointsTxt = tempHand.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
+        scoreTxt = tempHand.transform.GetChild(3).GetComponent<TextMeshProUGUI>();
+        levelTxt = tempHand.transform.GetChild(4).GetComponent<TextMeshProUGUI>();
     }
 }

@@ -44,11 +44,10 @@ public class PlayManager : MonoBehaviour
             GameObject temp = Instantiate(PlayerPrefabs[i]);
             Players[i] = temp;
             temp.GetComponent<PlayerHand>().handImg = CardScreen.transform.GetChild(i).gameObject;
+            temp.GetComponent<PlayerHand>().handImg.SetActive(true);
         }
         SetMap();
         handPhase = true;
-
-        Invoke("SetText", 0.1F);
     }
 
     void Update()
@@ -72,7 +71,11 @@ public class PlayManager : MonoBehaviour
 
     public void NewGame()
     {
-        foreach (GameObject p in Players) p.GetComponent<PlayerHand>().roundReset();
+        foreach (GameObject p in Players)
+        {
+            p.GetComponent<PlayerHand>().roundReset();
+            p.GetComponent<PlayerHand>().handImg.GetComponent<Image>().color = new Color32(0, 0, 0, 93);
+        }
 
         inGame = false;
         handPhase = true;
@@ -135,13 +138,5 @@ public class PlayManager : MonoBehaviour
         }
 
         for (int i = 0; i < Players.Length; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
-    }
-
-    void SetText()
-    {
-        foreach(GameObject p in Players)
-        {
-            p.GetComponent<PlayerProperties>().SetText();
-        }
     }
 }
