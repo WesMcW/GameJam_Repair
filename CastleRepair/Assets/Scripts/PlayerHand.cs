@@ -66,7 +66,6 @@ public class PlayerHand : MonoBehaviour
             myHand[index].GetComponent<Card>().setCardActive(gameObject);
             GetComponent<PlayerProperties>().equipCard(myHand[index].GetComponent<Card>());
             activeCardCount++;
-            PlayManager.inst.deleteCards.Add(myHand[index]);
             myHand.RemoveAt(index);
         }
     }

@@ -8,7 +8,7 @@ public class Knife : MonoBehaviour
     private float speed;
 
     [SerializeField]
-    private int owner; // Which player fired this knife
+    public int owner; // Which player fired this knife
 
     public bool pierce = false;
 

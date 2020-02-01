@@ -6,12 +6,12 @@ using TMPro;
 
 public class PlayerProperties : MonoBehaviour
 {
-    List<Card> active_cards;
+    public List<Card> active_cards;
     // This will track health and be attached to player objects. gameObject refers to what this script is attached to.
     private int unspent_pts;
     public int health = 100;
     //public int move_speed = 5; // Arbitrary value for now. Just created a place in memory for it
-    bool isDead;
+    public bool isDead;
 
     public int xp = 0, level = 1;
     int xpToLevel = 2;
@@ -35,7 +35,8 @@ public class PlayerProperties : MonoBehaviour
     {
         if (isDead == true)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
         if (!ignoreMe)
@@ -68,6 +69,8 @@ public class PlayerProperties : MonoBehaviour
             if (health <= 0) // by default player will instantly die
             {
                 isDead = true;
+
+                death(collision.GetComponent<Knife>().owner);
             }
             if(!collision.GetComponent<Knife>().pierce) Destroy(collision.gameObject);
         }
@@ -84,8 +87,11 @@ public class PlayerProperties : MonoBehaviour
         foreach (Card a in active_cards)
         {
             a.setCardUnactivate(gameObject);
-            active_cards.Remove(a);
+            Destroy(a.gameObject);
         }
+
+        active_cards = new List<Card>();
+        health = 100;
     }
 
     public void buyXP()
@@ -117,9 +123,24 @@ public class PlayerProperties : MonoBehaviour
 
     public void SetText()
     {
+        Debug.Log("setting text objects");
         GameObject tempHand = GetComponent<PlayerHand>().handImg;
         pointsTxt = tempHand.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
         scoreTxt = tempHand.transform.GetChild(3).GetComponent<TextMeshProUGUI>();
         levelTxt = tempHand.transform.GetChild(4).GetComponent<TextMeshProUGUI>();
+    }
+
+    public void death(int playerKill)
+    {
+        // disable player, add to death count, give point to player who killed
+
+        GetComponent<SpriteRenderer>().enabled = false;
+        transform.GetChild(0).gameObject.SetActive(false);
+        GetComponent<PlayerMove>().enabled = false;
+        //GetComponent<PlayerHand>().enabled = true;
+
+        PlayManager.inst.playersDead.Add(gameObject);
+
+        PlayManager.inst.Players[playerKill - 1].GetComponent<PlayerProperties>().points++;
     }
 }

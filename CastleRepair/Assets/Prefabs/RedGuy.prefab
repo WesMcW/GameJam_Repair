@@ -221,12 +221,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85a5c2891c75a54e8cf81e40ef1838c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active_cards: []
   health: 100
+  isDead: 0
   xp: 0
   level: 1
   points: 0
   score: 0
-  ignoreMe: 1
+  pointsTxt: {fileID: 0}
+  scoreTxt: {fileID: 0}
+  levelTxt: {fileID: 0}
+  ignoreMe: 0
 --- !u!50 &353961405
 Rigidbody2D:
   serializedVersion: 4
