@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpeedUpgrade : Card
 {
+    
+
     public override void setCardActive(GameObject myPlayer)
     {
         isActive = true;

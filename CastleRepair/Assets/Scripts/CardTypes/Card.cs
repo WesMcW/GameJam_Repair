@@ -4,8 +4,12 @@ using UnityEngine;
 
 public abstract class Card : MonoBehaviour
 {
+
     public bool isActive = false;
     public bool isPermanent = false;
+
+    public string description; // The words on the card
+    public string cardName; // Name of the card
 
     public virtual void setCardActive(GameObject myPlayer)
     {
