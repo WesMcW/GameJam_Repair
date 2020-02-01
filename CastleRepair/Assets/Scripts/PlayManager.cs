@@ -45,15 +45,21 @@ public class PlayManager : MonoBehaviour
         SetMap();
 
         // enable player ui functions (picking cards & spending points)
+        // when player pushes [ready button] ready bool = true
+        // if all players have ready = true, game starts || in update, constantly checks if all players are reaady
     }
 
     public void StartBattle()
     {
+        foreach (GameObject p in Players) p.SetActive(true);
 
+        // disables ui card controls, enables gameplay controls, maybe has a countdown until game start
     }
 
     void SetMap()
     {
+        // pick new map and set spawnpoints
+        // ** currently disables all players, can be changed
         if(currentMap != -1) Maps[currentMap].SetActive(false);
         foreach (GameObject p in Players) p.SetActive(false);
 
