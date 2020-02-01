@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 582491392596062038}
   - component: {fileID: 4642951799152206286}
   - component: {fileID: 7033096382532186364}
+  - component: {fileID: 404002513431838374}
   m_Layer: 0
   m_Name: SpeedUpCard
   m_TagString: Untagged
@@ -280,6 +281,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &404002513431838374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866509890180660873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e442de6fa685e14d9a31f186cdf4ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  isPermanent: 0
+  description: 
+  cardName: 
 --- !u!1 &4527817751146860279
 GameObject:
   m_ObjectHideFlags: 0
