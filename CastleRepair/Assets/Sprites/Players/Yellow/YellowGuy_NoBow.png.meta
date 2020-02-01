@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: 522cf2911efcbe64f8f0e040b9391296
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8380497715584255595
+    second: YellowGuy_NoBow_0
+  - first:
+      213: 5582633462236195583
+    second: YellowGuy_NoBow_1
+  - first:
+      213: -4401175863075906097
+    second: YellowGuy_NoBow_2
+  - first:
+      213: 5016928372582019829
+    second: YellowGuy_NoBow_3
+  - first:
+      213: 2294132613734296927
+    second: YellowGuy_NoBow_4
+  - first:
+      213: 4531205386407664891
+    second: YellowGuy_NoBow_5
+  - first:
+      213: -2667961016820363158
+    second: YellowGuy_NoBow_6
+  - first:
+      213: -2479522284112182688
+    second: YellowGuy_NoBow_7
+  - first:
+      213: -8145155973197015696
+    second: YellowGuy_NoBow_8
+  - first:
+      213: -3060800530723499269
+    second: YellowGuy_NoBow_9
+  - first:
+      213: 4538700434267603293
+    second: YellowGuy_NoBow_10
+  - first:
+      213: -7957178211925860617
+    second: YellowGuy_NoBow_11
+  - first:
+      213: -351635180300740889
+    second: YellowGuy_NoBow_12
+  - first:
+      213: 5162373115345824365
+    second: YellowGuy_NoBow_13
+  - first:
+      213: -358090523482328436
+    second: YellowGuy_NoBow_14
+  - first:
+      213: 5934456669433920725
+    second: YellowGuy_NoBow_15
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_0
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1260
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb8c73af6f9f67439a7634945265641
+      internalID: -8380497715584255595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1260
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2b41675c4d0ac4c842d5705e09e2e8
+      internalID: 5582633462236195583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_2
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1260
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4f287ced8b9c944825cb033aac8607
+      internalID: -4401175863075906097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_3
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1260
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e354ea0ecaed3c4b976eb2258970497
+      internalID: 5016928372582019829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1062
+        width: 84
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ce50144eb19c74fa1050e25f54b3f8
+      internalID: 2294132613734296927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_5
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1062
+        width: 84
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb5a8791754ec8478a5f616f53a5bc5
+      internalID: 4531205386407664891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_6
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 1062
+        width: 84
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e42e59c14d74242be559bf8db9a737
+      internalID: -2667961016820363158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1062
+        width: 84
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc33d456212ce9744a9c0e6feec05b0c
+      internalID: -2479522284112182688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_8
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 858
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96fc8957706ba449a35dbd23ab11b49
+      internalID: -8145155973197015696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_9
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 858
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0cd569b9d25a846b355ded996ca405
+      internalID: -3060800530723499269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_10
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 858
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6379095d4cad3847b0156023011df3f
+      internalID: 4538700434267603293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_11
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 858
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bba73cc917a7f42b03acd0a83a2d7c
+      internalID: -7957178211925860617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_12
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 636
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79451cc2f781294d96ffa12ba562bd2
+      internalID: -351635180300740889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_13
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 636
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba878a979b8414f47995fd1046ab58bf
+      internalID: 5162373115345824365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_14
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 636
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed5ece5e2f0ff34fa0fee1fb989e28f
+      internalID: -358090523482328436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowGuy_NoBow_15
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 636
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28c3e843125d9d4d9aeb3d7c0b843a7
+      internalID: 5934456669433920725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
