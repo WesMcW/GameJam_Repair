@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHand : MonoBehaviour
 {
@@ -52,7 +53,8 @@ public class PlayerHand : MonoBehaviour
                 Debug.Log(gameObject.name + " is ready");
                 ready = true;
                 PlayManager.inst.readyPlayers++;
-                // changes some ui
+
+                handImg.GetComponent<Image>().color = new Color32(18, 58, 8, 93);
             }
         }
     }
