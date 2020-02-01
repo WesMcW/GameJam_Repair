@@ -273,7 +273,7 @@ InputManager:
     dead: 0.001
     sensitivity: 3
     snap: 1
-    invert: 1
+    invert: 0
     type: 2
     axis: 2
     joyNum: 1
@@ -289,7 +289,7 @@ InputManager:
     dead: 0.001
     sensitivity: 3
     snap: 1
-    invert: 1
+    invert: 0
     type: 2
     axis: 2
     joyNum: 2
@@ -305,7 +305,7 @@ InputManager:
     dead: 0.001
     sensitivity: 3
     snap: 1
-    invert: 1
+    invert: 0
     type: 2
     axis: 2
     joyNum: 3
@@ -321,7 +321,7 @@ InputManager:
     dead: 0.001
     sensitivity: 3
     snap: 1
-    invert: 1
+    invert: 0
     type: 2
     axis: 2
     joyNum: 4

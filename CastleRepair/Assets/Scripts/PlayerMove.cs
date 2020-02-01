@@ -24,12 +24,16 @@ public class PlayerMove : MonoBehaviour {
     [SerializeField]
     private GameObject knife;
 
+    private float fireCooldown;
+    private bool canFire;
+
     // Use this for initialization
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         SetPlayerControls();
         movementSpeed = 5f;
+        canFire = true;
     }
 
     // Update is called once per frame
@@ -65,6 +69,15 @@ public class PlayerMove : MonoBehaviour {
         if (Input.GetAxis(shoot) > 0)
         {
             Shoot();
+        }
+
+        if (fireCooldown > 0)
+        {
+            fireCooldown -= Time.deltaTime;
+            if (fireCooldown <= 0)
+            {
+                canFire = true;
+            }
         }
 
 
@@ -104,7 +117,13 @@ public class PlayerMove : MonoBehaviour {
     private void Shoot()
     {
         print(playerNum + " is firing");
-        GameObject clone = Instantiate(knife, transform.position, transform.rotation);
+
+        if (canFire)
+        {
+            canFire = false;
+            fireCooldown = 0.5f;
+            GameObject clone = Instantiate(knife, transform.position, transform.rotation);
+        }
         // Knife needs velocity on its own script
     }
 
