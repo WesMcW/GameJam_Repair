@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayManager : MonoBehaviour
 {
+    public static PlayManager inst;
+
     // Used to treat player prefs like a variable
     static string PlayerPrefsPlayerCount = "PlayerCount";
 
@@ -19,6 +21,12 @@ public class PlayManager : MonoBehaviour
     public GameObject[] PlayerPrefabs;
 
     public List<GameObject> deleteCards;
+
+    private void Awake()
+    {
+        if (inst == null) inst = this;
+        else Destroy(gameObject);
+    }
 
     void Start()
     {
