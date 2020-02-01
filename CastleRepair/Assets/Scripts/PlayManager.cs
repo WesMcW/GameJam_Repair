@@ -164,7 +164,7 @@ public class PlayManager : MonoBehaviour
             p.GetComponent<PlayerHand>().enabled = true;
         }
 
-        currentMap = Random.Range(0, 4);
+        currentMap = Random.Range(0, Maps.Length);
         Maps[currentMap].SetActive(true);
 
         winPoints = Random.Range(1, 4);
@@ -173,8 +173,8 @@ public class PlayManager : MonoBehaviour
         // place players in their spawnpoints
         for (int i = 0; i < Players.Length; i++)
         {
-            int rand = Random.Range(0, 3);
-            while(Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[rand]) rand = Random.Range(0, 3);
+            int rand = Random.Range(0, 4);
+            while(Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[rand]) rand = Random.Range(0, 4);
 
             Players[i].transform.position = Maps[i].GetComponent<MapPlayerSpawns>().PlayerSpawns[rand];
             Maps[i].GetComponent<MapPlayerSpawns>().isUsed[rand] = true;
