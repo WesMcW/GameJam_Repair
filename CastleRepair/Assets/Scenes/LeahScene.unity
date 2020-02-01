@@ -1012,10 +1012,10 @@ MonoBehaviour:
   Players: []
   CardScreen: {fileID: 1234408566}
   PlayerPrefabs:
-  - {fileID: 2598688156072570607, guid: b68642de35b1c454b8079733b345e259, type: 3}
-  - {fileID: 1001989037661539741, guid: b961551ab1bcc904b9831cfd3f42178e, type: 3}
-  - {fileID: 7864104698891311175, guid: 881ccb7f1b814c54f984ea6b1c44815d, type: 3}
-  - {fileID: 2934368267290348576, guid: 42829b4403accd3489a302c32e1ca053, type: 3}
+  - {fileID: 6109385668940460528, guid: 482ee75757c7d7644aaf18af4b3acdba, type: 3}
+  - {fileID: 3317157789445645536, guid: 55a14421a2a7ba84d8e02fbd494f7881, type: 3}
+  - {fileID: 7696445073226412956, guid: 5e5d224bdc074894caa077f60383a352, type: 3}
+  - {fileID: 1162031518426027775, guid: d2598edff8e14da4688d323f867877e0, type: 3}
   deleteCards: []
 --- !u!4 &1507141757
 Transform:

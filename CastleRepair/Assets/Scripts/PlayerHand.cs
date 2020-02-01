@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayerHand : MonoBehaviour
 {
-    ///<summary>The player number, used to set inputs identical to PlayerMove</summary>
-    [SerializeField]
-    private int playerNum;
+    int playerNum;
 
     public bool ready = false;
 
@@ -23,15 +21,8 @@ public class PlayerHand : MonoBehaviour
 
     void Start()
     {
-        /*
-        // temp, for testing on keyboard
-        buttons = new List<KeyCode>();
-        buttons.Add(KeyCode.A);
-        buttons.Add(KeyCode.B);
-        buttons.Add(KeyCode.C);
-        buttons.Add(KeyCode.D);
-        buttons.Add(KeyCode.E);
-        */
+        playerNum = GetComponent<PlayerMove>().playerNum;
+
         a = "A" + playerNum.ToString();
         b = "B" + playerNum.ToString();
         x = "X" + playerNum.ToString();

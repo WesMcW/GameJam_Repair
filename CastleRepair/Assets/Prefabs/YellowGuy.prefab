@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1162031518426027521}
   - component: {fileID: 1162031518426027774}
   - component: {fileID: 1162031518426027523}
+  - component: {fileID: -8958542887551042446}
+  - component: {fileID: 5140297128061413415}
   m_Layer: 0
   m_Name: YellowGuy
   m_TagString: Untagged
@@ -117,3 +119,45 @@ MonoBehaviour:
   playerNum: 4
   movementSpeed: 0
   knife: {fileID: 1392192985621031228, guid: a72ade4178bd3d94898f4053ecc12ae5, type: 3}
+--- !u!114 &-8958542887551042446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162031518426027775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e13abb44740f54abe9d1dd14204541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ready: 0
+  activeCardCount: 0
+  maxCardCount: 1
+  handSpot: {fileID: 0}
+  myHand: []
+  CardPrefs:
+  - {fileID: 5890531280356816385, guid: 5c81e65400f3b2042ba4b50858501210, type: 3}
+  - {fileID: 2363188382441483503, guid: 8b72d886ea8326341abc512da7292ea9, type: 3}
+  - {fileID: 2866509890180660873, guid: 94ada5f9121f73641bab0ed99b88f6c6, type: 3}
+--- !u!50 &5140297128061413415
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162031518426027775}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

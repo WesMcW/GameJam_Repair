@@ -90,7 +90,7 @@ public class PlayManager : MonoBehaviour
         foreach (GameObject p in Players)
         {
             p.GetComponent<SpriteRenderer>().enabled = false;
-            //p.GetComponent<PlayerMove>().enabled = false;
+            p.GetComponent<PlayerMove>().enabled = false;
             p.GetComponent<PlayerHand>().enabled = true;
         }
 
