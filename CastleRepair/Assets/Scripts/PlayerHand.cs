@@ -13,7 +13,10 @@ public class PlayerHand : MonoBehaviour
     public int activeCardCount = 0;
     public int maxCardCount = 1;
 
+    public GameObject handSpot;
     public List<GameObject> myHand;
+    public GameObject[] CardPrefs;
+    int[] myDeck;   // [MoveSpeedCard, BarrierCard, ...]
 
     string a, b, x, y;
     //List<KeyCode> buttons;
@@ -33,6 +36,10 @@ public class PlayerHand : MonoBehaviour
         b = "B" + playerNum.ToString();
         x = "X" + playerNum.ToString();
         y = "Y" + playerNum.ToString();
+
+        // update this as more cards added; this is how many of each card type is in deck
+        myDeck = new int[3] {3, 3, 3 };
+        addManyCards(3);
     }
 
     void Update()
@@ -65,5 +72,29 @@ public class PlayerHand : MonoBehaviour
             PlayManager.inst.deleteCards.Add(myHand[index]);
             myHand.RemoveAt(index);
         }
+    }
+
+    public void roundReset()
+    {
+        activeCardCount = 0;
+        if (myHand.Count < 4) drawCard();
+        ready = false;
+    }
+
+    void drawCard()
+    {
+        int rand = Random.Range(0, myDeck.Length);
+        while(myDeck[rand] <= 0) rand = Random.Range(0, myDeck.Length);
+
+        // instantiate new card in the hand, put it in the hand, subtract from the deck
+        GameObject newCard = Instantiate(CardPrefs[rand]);
+        newCard.transform.SetParent(handSpot.transform);
+        myHand.Add(newCard);
+        myDeck[rand]--;
+    }
+
+    public void addManyCards(int count)
+    {
+        for(int i = 0; i < count; i++) drawCard();
     }
 }

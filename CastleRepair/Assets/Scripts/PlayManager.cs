@@ -15,6 +15,7 @@ public class PlayManager : MonoBehaviour
 
     int currentMap = -1;
     int winPoints;
+
     public GameObject[] Maps;
     public GameObject[] Players;
     public GameObject CardScreen;
@@ -38,6 +39,7 @@ public class PlayManager : MonoBehaviour
         {
             GameObject temp = Instantiate(PlayerPrefabs[i]);
             Players[i] = temp;
+            temp.GetComponent<PlayerHand>().handSpot = CardScreen.transform.GetChild(i).gameObject;
         }
         SetMap();
     }
@@ -52,6 +54,8 @@ public class PlayManager : MonoBehaviour
 
     public void NewGame()
     {
+        foreach (GameObject p in Players) p.GetComponent<PlayerHand>().roundReset();
+
         inGame = false;
         handPhase = true;
 
@@ -68,6 +72,13 @@ public class PlayManager : MonoBehaviour
         foreach (GameObject p in Players) p.SetActive(true);
         foreach (GameObject a in deleteCards) Destroy(a);   // destroy all used cards
 
+        foreach (GameObject p in Players)
+        {
+            p.GetComponent<SpriteRenderer>().enabled = true;
+            //p.GetComponent<PlayerMove>().enabled = true;
+            p.GetComponent<PlayerHand>().enabled = false;
+        }
+
         // disables ui card controls, enables gameplay controls, maybe has a countdown until game start
     }
 
@@ -76,7 +87,12 @@ public class PlayManager : MonoBehaviour
         // pick new map and set spawnpoints
         // ** currently disables all players, can be changed
         if(currentMap != -1) Maps[currentMap].SetActive(false);
-        foreach (GameObject p in Players) p.SetActive(false);
+        foreach (GameObject p in Players)
+        {
+            p.GetComponent<SpriteRenderer>().enabled = false;
+            //p.GetComponent<PlayerMove>().enabled = false;
+            p.GetComponent<PlayerHand>().enabled = true;
+        }
 
         currentMap = Random.Range(0, 4);
         Maps[currentMap].SetActive(true);
