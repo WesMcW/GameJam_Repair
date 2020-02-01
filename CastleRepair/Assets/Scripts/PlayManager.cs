@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class PlayManager : MonoBehaviour
 {
+    // Used to treat player prefs like a variable
+    static string PlayerPrefsPlayerCount = "PlayerCount";
+
     public bool inGame = false;
     bool handPhase = false;
 
@@ -17,10 +20,10 @@ public class PlayManager : MonoBehaviour
 
     void Start()
     {
-        //PlayerPrefs.SetInt("PlayerCount", 2);
+        PlayerPrefs.SetInt(PlayerPrefsPlayerCount, 2);
 
-        Players = new GameObject[PlayerPrefs.GetInt("PlayerCount")];
-        for (int i = 0; i < PlayerPrefs.GetInt("PlayerCount"); i++)
+        Players = new GameObject[PlayerPrefs.GetInt(PlayerPrefsPlayerCount)];
+        for (int i = 0; i < PlayerPrefs.GetInt(PlayerPrefsPlayerCount); i++)
         {
             GameObject temp = Instantiate(PlayerPrefabs[i]);
             Players[i] = temp;
