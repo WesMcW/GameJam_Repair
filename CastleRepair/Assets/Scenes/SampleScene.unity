@@ -924,6 +924,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: YellowGuy
       objectReference: {fileID: 0}
+    - target: {fileID: 5446047314987185412, guid: d2598edff8e14da4688d323f867877e0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446047314987185412, guid: d2598edff8e14da4688d323f867877e0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2598edff8e14da4688d323f867877e0, type: 3}
 --- !u!1001 &3317157790485751901
@@ -993,6 +1003,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedGuy
       objectReference: {fileID: 0}
+    - target: {fileID: 7914380462503819647, guid: 55a14421a2a7ba84d8e02fbd494f7881,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914380462503819647, guid: 55a14421a2a7ba84d8e02fbd494f7881,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a14421a2a7ba84d8e02fbd494f7881, type: 3}
 --- !u!1001 &6109385668799811289
@@ -1002,6 +1022,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6109385668799811292, guid: 482ee75757c7d7644aaf18af4b3acdba,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109385668799811292, guid: 482ee75757c7d7644aaf18af4b3acdba,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109385668799811292, guid: 482ee75757c7d7644aaf18af4b3acdba,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109385668799811292, guid: 482ee75757c7d7644aaf18af4b3acdba,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6109385668940460528, guid: 482ee75757c7d7644aaf18af4b3acdba,
         type: 3}
       propertyPath: m_Name
@@ -1071,6 +1111,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4128385722341583002, guid: 5e5d224bdc074894caa077f60383a352,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128385722341583002, guid: 5e5d224bdc074894caa077f60383a352,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7696445073226412929, guid: 5e5d224bdc074894caa077f60383a352,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 5611264954300572498}
   - component: {fileID: -8177114771458685405}
   - component: {fileID: 6109385668799811292}
-  - component: {fileID: 6109385668799811291}
   m_Layer: 0
   m_Name: BlueGuy
   m_TagString: Untagged
@@ -314,22 +313,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.54, y: 1.26}
   m_EdgeRadius: 0
---- !u!114 &6109385668799811291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6109385668940460528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c85a5c2891c75a54e8cf81e40ef1838c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xp: 0
-  level: 1
-  points: 0
-  score: 0
 --- !u!1 &7145129180894037072
 GameObject:
   m_ObjectHideFlags: 0
