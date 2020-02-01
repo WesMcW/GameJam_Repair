@@ -206,7 +206,7 @@ MonoBehaviour:
   knife: {fileID: 12063720034261493, guid: be347ce39d6c1bd4ea7f2cbea87a9669, type: 3}
   resetCD: 0.5
   multiShot: 0
-  pierceShot: 0
+  pierceShot: 1
 --- !u!114 &-3871902811360059101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,7 +297,7 @@ MonoBehaviour:
   level: 1
   points: 0
   score: 0
-  ignoreMe: 0
+  ignoreMe: 1
 --- !u!61 &6109385668799811292
 BoxCollider2D:
   m_ObjectHideFlags: 0

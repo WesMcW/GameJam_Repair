@@ -69,7 +69,7 @@ public class PlayerProperties : MonoBehaviour
             {
                 isDead = true;
             }
-            else Destroy(collision.gameObject);
+            if(!collision.GetComponent<Knife>().pierce) Destroy(collision.gameObject);
         }
     }
 
