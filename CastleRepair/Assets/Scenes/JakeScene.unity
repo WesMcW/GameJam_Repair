@@ -2714,6 +2714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inGame: 0
+  readyPlayers: 0
   Maps:
   - {fileID: 2134685531}
   - {fileID: 1492872363}
