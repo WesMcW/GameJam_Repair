@@ -84,7 +84,7 @@ public class PlayerHand : MonoBehaviour
         // instantiate new card in the hand, put it in the hand, subtract from the deck
         GameObject newCard = Instantiate(CardPrefs[rand]);
         if (cardSpot == null) cardSpot = handImg.transform.GetChild(0).gameObject;
-        else newCard.transform.SetParent(cardSpot.transform);
+        newCard.transform.SetParent(cardSpot.transform);
         myHand.Add(newCard);
         myDeck[rand]--;
     }

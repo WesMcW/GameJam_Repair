@@ -47,8 +47,6 @@ public class PlayManager : MonoBehaviour
         }
         SetMap();
         handPhase = true;
-
-        Invoke("SetText", 0.1F);
     }
 
     void Update()
@@ -135,13 +133,5 @@ public class PlayManager : MonoBehaviour
         }
 
         for (int i = 0; i < Players.Length; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
-    }
-
-    void SetText()
-    {
-        foreach(GameObject p in Players)
-        {
-            p.GetComponent<PlayerProperties>().SetText();
-        }
     }
 }
