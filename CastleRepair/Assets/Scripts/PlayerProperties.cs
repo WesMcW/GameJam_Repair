@@ -10,7 +10,12 @@ public class PlayerProperties : MonoBehaviour
     private int health = 100;
     public int move_speed = 5; // Arbitrary value for now. Just created a place in memory for it
     bool isDead;
-    
+
+    public int xp = 0, level = 1;
+    int xpToLevel = 2;
+    public int points = 0;
+    public int score = 0;
+
     // Start is called before the first frame update INITIALIZATION
     void Start()
     {
@@ -61,6 +66,33 @@ public class PlayerProperties : MonoBehaviour
         {
             a.setCardUnactivate(gameObject);
             active_cards.Remove(a);
+        }
+    }
+
+    public void buyXP()
+    {
+        if(points > 0)
+        {
+            xp++;
+            if(xp >= xpToLevel)
+            {
+                xp -= xpToLevel;
+                level++;
+                xpToLevel *= 2;
+                GetComponent<PlayerHand>().maxCardCount++;
+                points--;
+            }
+        }
+    }
+
+    public void buyScore()
+    {
+        if(points > 0)
+        {
+            score++;
+            points--;
+
+            // check for win
         }
     }
 }
