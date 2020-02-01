@@ -174,9 +174,9 @@ MonoBehaviour:
   handImg: {fileID: 0}
   myHand: []
   CardPrefs:
-  - {fileID: 5890531280356816385, guid: 5c81e65400f3b2042ba4b50858501210, type: 3}
-  - {fileID: 2363188382441483503, guid: 8b72d886ea8326341abc512da7292ea9, type: 3}
-  - {fileID: 2866509890180660873, guid: 94ada5f9121f73641bab0ed99b88f6c6, type: 3}
+  - {fileID: 2866509890180660873, guid: 373bec585ba77764db9f6c2497c8fc8f, type: 3}
+  - {fileID: 5890531280356816385, guid: a8db23c9b35560b46a3a13212c534214, type: 3}
+  - {fileID: 4642333506202468322, guid: 26cfd79f8a7bc2943ac801e8224ab049, type: 3}
 --- !u!61 &7914380462503819647
 BoxCollider2D:
   m_ObjectHideFlags: 0
