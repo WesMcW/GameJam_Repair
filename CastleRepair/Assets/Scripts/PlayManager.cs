@@ -17,6 +17,8 @@ public class PlayManager : MonoBehaviour
 
     void Start()
     {
+        //PlayerPrefs.SetInt("PlayerCount", 2);
+
         Players = new GameObject[PlayerPrefs.GetInt("PlayerCount")];
         for (int i = 0; i < PlayerPrefs.GetInt("PlayerCount"); i++)
         {
@@ -61,5 +63,15 @@ public class PlayManager : MonoBehaviour
         winPoints = Random.Range(1, 4);
 
         // place players in their spawnpoints
+        for (int i = 0; i < Players.Length; i++)
+        {
+            int rand = Random.Range(0, 3);
+            while(Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[rand]) rand = Random.Range(0, 3);
+
+            Players[i].transform.position = Maps[i].GetComponent<MapPlayerSpawns>().PlayerSpawns[rand];
+            Maps[i].GetComponent<MapPlayerSpawns>().isUsed[rand] = true;
+        }
+
+        for (int i = 0; i < Players.Length; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
     }
 }

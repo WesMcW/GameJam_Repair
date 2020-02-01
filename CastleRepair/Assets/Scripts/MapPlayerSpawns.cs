@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class MapPlayerSpawns : MonoBehaviour
 {
-    Vector2[] PlayerSpawns;
+    public bool[] isUsed;
+    public Vector2[] PlayerSpawns;
 }
