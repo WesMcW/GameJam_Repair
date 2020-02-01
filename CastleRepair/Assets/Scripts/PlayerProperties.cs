@@ -66,7 +66,7 @@ public class PlayerProperties : MonoBehaviour
         if (collision.gameObject.tag == "Knife")
         {
             health -= 100; // In case we decide at some point we don't want to instantly kill player, here's a mechanism
-            if (health <= 0) // by default player will instantly die
+            if (health <= 0 && !isDead) // by default player will instantly die
             {
                 isDead = true;
 
@@ -91,6 +91,7 @@ public class PlayerProperties : MonoBehaviour
         }
 
         active_cards = new List<Card>();
+        isDead = false;
         health = 100;
     }
 

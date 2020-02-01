@@ -18,6 +18,7 @@ public class PlayerHand : MonoBehaviour
     public List<GameObject> myHand;
     public GameObject[] CardPrefs;
     int[] myDeck;   // [MoveSpeedCard, BarrierCard, ...]
+    int totalCards = 0;
 
     string a, b, x, y;
     //List<KeyCode> buttons;
@@ -32,7 +33,8 @@ public class PlayerHand : MonoBehaviour
         y = "Y" + playerNum.ToString();
 
         // update this as more cards added; this is how many of each card type is in deck
-        myDeck = new int[8] {3, 3, 1, 3, 3, 3, 3, 3 };
+        myDeck = new int[8] {10, 10, 1, 10, 10, 10, 10, 10 };
+        foreach (int i in myDeck) totalCards += i;
         addManyCards(3);
     }
 
@@ -79,6 +81,13 @@ public class PlayerHand : MonoBehaviour
 
     void drawCard()
     {
+        if(totalCards <= 0)
+        {
+            // resets deck; so we wont run out of cards and be stuck in a loop
+            myDeck = new int[8] { 10, 10, 1, 10, 10, 10, 10, 10 };
+            foreach (int i in myDeck) totalCards += i;
+        }
+        
         int rand = Random.Range(0, myDeck.Length);
         while(myDeck[rand] <= 0) rand = Random.Range(0, myDeck.Length);
 
@@ -88,6 +97,7 @@ public class PlayerHand : MonoBehaviour
         newCard.transform.SetParent(cardSpot.transform);
         myHand.Add(newCard);
         myDeck[rand]--;
+        totalCards--;
     }
 
     public void addManyCards(int count)
