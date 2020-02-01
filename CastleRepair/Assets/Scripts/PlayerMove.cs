@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour {
 
     [SerializeField]
-    private string playerNum;
+    private int playerNum;
 
     /*
      // If needed, a sprite that shows them dead

@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class PlayerHand : MonoBehaviour
 {
+    ///<summary>The player number, used to set inputs identical to PlayerMove</summary>
+    [SerializeField]
+    private int playerNum;
+
     public bool ready = false;
 
     public int activeCardCount = 0;
     public int maxCardCount = 1;
 
     public List<GameObject> myHand;
-    List<KeyCode> buttons;
+
+    string a, b, x, y;
+    //List<KeyCode> buttons;
 
     void Start()
     {
+        /*
         // temp, for testing on keyboard
         buttons = new List<KeyCode>();
         buttons.Add(KeyCode.A);
@@ -21,6 +28,11 @@ public class PlayerHand : MonoBehaviour
         buttons.Add(KeyCode.C);
         buttons.Add(KeyCode.D);
         buttons.Add(KeyCode.E);
+        */
+        a = "A" + playerNum.ToString();
+        b = "B" + playerNum.ToString();
+        x = "X" + playerNum.ToString();
+        y = "Y" + playerNum.ToString();
     }
 
     void Update()
@@ -29,11 +41,11 @@ public class PlayerHand : MonoBehaviour
         {
             if (activeCardCount < maxCardCount) // can add more cards
             {
-                if (Input.GetKeyDown(buttons[0])) useCard(0);
-                else if (Input.GetKeyDown(buttons[1])) useCard(1);
-                else if (Input.GetKeyDown(buttons[2])) useCard(2);
-                else if (Input.GetKeyDown(buttons[3])) useCard(3);
-                else if (Input.GetKeyDown(buttons[4])) useCard(4);
+                if (Input.GetButtonDown(a)) useCard(0);
+                else if (Input.GetButtonDown(b)) useCard(1);
+                else if (Input.GetButtonDown(x)) useCard(2);
+                else if (Input.GetButtonDown(y)) useCard(3);
+                
             }
             else if (activeCardCount == maxCardCount)
             {
