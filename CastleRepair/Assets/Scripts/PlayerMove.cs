@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour {
 
     private Rigidbody2D myRigidBody;
 
-    private BoxCollider2D myCollider;
+    private BoxCollider2D[] myCollider;
 
     private Animator anim;
 
@@ -36,7 +36,7 @@ public class PlayerMove : MonoBehaviour {
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-        myCollider = GetComponent<BoxCollider2D>();
+        myCollider = GetComponents<BoxCollider2D>();
         crosshairHolder = transform.GetChild(0).gameObject;
         Debug.Assert(crosshairHolder != null); // Checks to ensure it's not null
         SetPlayerControls();
@@ -144,7 +144,7 @@ public class PlayerMove : MonoBehaviour {
             canFire = false;
             fireCooldown = 0.5f;
             GameObject clone = Instantiate(knife, crosshairHolder.transform.position, crosshairHolder.transform.rotation);
-            Physics2D.IgnoreCollision(clone.GetComponent<BoxCollider2D>(), myCollider);
+            Physics2D.IgnoreCollision(clone.GetComponent<BoxCollider2D>(), myCollider[0]);
         }
     }
 }
