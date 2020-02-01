@@ -939,6 +939,12 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7707087562008094024, guid: d2598edff8e14da4688d323f867877e0,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6935735830447961637, guid: d217519913bd4a8418148f82e274637c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2598edff8e14da4688d323f867877e0, type: 3}
 --- !u!1001 &3317157790485751901
@@ -1033,6 +1039,12 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8780776962620676201, guid: 55a14421a2a7ba84d8e02fbd494f7881,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6935735830447961637, guid: d217519913bd4a8418148f82e274637c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a14421a2a7ba84d8e02fbd494f7881, type: 3}
 --- !u!1001 &6109385668799811289
@@ -1042,6 +1054,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 805769167362898256, guid: 482ee75757c7d7644aaf18af4b3acdba,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6935735830447961637, guid: d217519913bd4a8418148f82e274637c,
+        type: 3}
     - target: {fileID: 4241175593005082804, guid: 482ee75757c7d7644aaf18af4b3acdba,
         type: 3}
       propertyPath: m_Layer
@@ -1146,6 +1164,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 720444656025367399, guid: 5e5d224bdc074894caa077f60383a352,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6935735830447961637, guid: d217519913bd4a8418148f82e274637c,
+        type: 3}
     - target: {fileID: 4128385722341583002, guid: 5e5d224bdc074894caa077f60383a352,
         type: 3}
       propertyPath: m_Offset.y
