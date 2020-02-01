@@ -33,7 +33,7 @@ public class PlayerMove : MonoBehaviour {
     private float fireCooldown;
     private bool canFire;
 
-    public bool multiShot;
+    public bool multiShot, pierceShot;
 
     // Use this for initialization
     void Start()
@@ -150,6 +150,7 @@ public class PlayerMove : MonoBehaviour {
             if (!multiShot)
             {
                 GameObject clone = Instantiate(knife, crosshairHolder.transform.position, crosshairHolder.transform.rotation);
+                if (pierceShot) clone.GetComponent<Knife>().pierce = true;
                 //Physics2D.IgnoreCollision(clone.GetComponent<BoxCollider2D>(), myCollider[0]);
             }
             else
@@ -157,6 +158,7 @@ public class PlayerMove : MonoBehaviour {
                 for (int i = -1; i < 2; i++)
                 {
                     GameObject clone = Instantiate(knife, crosshairHolder.transform.position, crosshairHolder.transform.rotation * Quaternion.Euler(0, 0, crosshairHolder.transform.rotation.z + 20 * i));
+                    if (pierceShot) clone.GetComponent<Knife>().pierce = true;
                     //Physics2D.IgnoreCollision(clone.GetComponent<BoxCollider2D>(), myCollider[0]);
                     //GameObject newClone = Instantiate(knife, crosshairHolder.transform.position, Quaternion.Euler(new Vector3(0, 0, crosshairHolder.transform.rotation.z + 10)));
                 }
