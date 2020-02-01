@@ -101,5 +101,5 @@ MonoBehaviour:
   myHand: []
   CardPrefs:
   - {fileID: 2363188382441483503, guid: 8b72d886ea8326341abc512da7292ea9, type: 3}
-  - {fileID: 2363188382441483503, guid: 8b72d886ea8326341abc512da7292ea9, type: 3}
-  - {fileID: 2363188382441483503, guid: 8b72d886ea8326341abc512da7292ea9, type: 3}
+  - {fileID: 2866509890180660873, guid: 94ada5f9121f73641bab0ed99b88f6c6, type: 3}
+  - {fileID: 5890531280356816385, guid: 5c81e65400f3b2042ba4b50858501210, type: 3}
