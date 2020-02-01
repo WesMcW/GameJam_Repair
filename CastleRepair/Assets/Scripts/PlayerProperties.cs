@@ -9,7 +9,7 @@ public class PlayerProperties : MonoBehaviour
     List<Card> active_cards;
     // This will track health and be attached to player objects. gameObject refers to what this script is attached to.
     private int unspent_pts;
-    private int health = 100;
+    public int health = 100;
     //public int move_speed = 5; // Arbitrary value for now. Just created a place in memory for it
     bool isDead;
 
@@ -64,12 +64,12 @@ public class PlayerProperties : MonoBehaviour
     {
         if (collision.gameObject.tag == "Knife")
         {
-            Destroy(collision.gameObject);
             health -= 100; // In case we decide at some point we don't want to instantly kill player, here's a mechanism
             if (health <= 0) // by default player will instantly die
             {
                 isDead = true;
             }
+            else Destroy(collision.gameObject);
         }
     }
 

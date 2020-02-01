@@ -61,7 +61,11 @@ public class PlayManager : MonoBehaviour
 
                 handPhase = false;
                 CardScreen.SetActive(false);
-                foreach (GameObject p in Players) p.GetComponent<SpriteRenderer>().enabled = true;
+                foreach (GameObject p in Players)
+                {
+                    p.GetComponent<SpriteRenderer>().enabled = true;
+                    p.transform.GetChild(0).gameObject.SetActive(true);
+                }
 
                 // start a countdown
                 Invoke("StartBattle", 5F);
@@ -99,7 +103,6 @@ public class PlayManager : MonoBehaviour
 
         foreach (GameObject p in Players)
         {
-            //p.GetComponent<SpriteRenderer>().enabled = true;
             p.GetComponent<PlayerMove>().enabled = true;
             p.GetComponent<PlayerHand>().enabled = false;
         }
@@ -117,6 +120,7 @@ public class PlayManager : MonoBehaviour
         foreach (GameObject p in Players)
         {
             p.GetComponent<SpriteRenderer>().enabled = false;
+            p.transform.GetChild(0).gameObject.SetActive(false);
             p.GetComponent<PlayerMove>().enabled = false;
             p.GetComponent<PlayerHand>().enabled = true;
         }

@@ -7,6 +7,7 @@ public class Barrier : Card
     public override void setCardActive(GameObject myPlayer)
     {
         isActive = true;
+        myPlayer.GetComponent<PlayerProperties>().health += 10; // makes player take 2 hits
 
         // in player health script; turn on a bool to true, if hit turns bool off for extra life
     }
