@@ -17,13 +17,12 @@ public class PlayManager : MonoBehaviour
     int currentMap = -1;
     int winPoints;
     public int readyPlayers = 0;
+    public List<GameObject> playersDead;
 
     public GameObject[] Maps;
     public GameObject[] Players;
     public GameObject CardScreen;
     public GameObject[] PlayerPrefabs;
-
-    public List<GameObject> deleteCards;
 
     private void Awake()
     {
@@ -33,7 +32,7 @@ public class PlayManager : MonoBehaviour
 
     void Start()
     {
-        deleteCards = new List<GameObject>();
+        playersDead = new List<GameObject>();
         //PlayerPrefs.SetInt(PlayerPrefsPlayerCount, 2);
 
         playerCount = PlayerPrefs.GetInt(PlayerPrefsPlayerCount);
@@ -71,13 +70,55 @@ public class PlayManager : MonoBehaviour
                 Invoke("StartBattle", 5F);
             }
         }
+        else
+        {
+            if (inGame)
+            {
+                // check for deaths + 1 == Players.Length, if so invoke new game and reset players -> GetComponent<PlayerHand>().enabled = true;
+                if (playersDead.Count + 1 == playerCount)
+                {
+                    Debug.Log("Game Ended!");
+                    inGame = false;
+
+                    foreach (GameObject p in Players)
+                    {
+                        // finding winner
+                        if (!p.GetComponent<PlayerProperties>().isDead)
+                        {
+                            Debug.Log(p.name + " has won this round!");
+                            p.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                            p.GetComponent<PlayerProperties>().points += winPoints;
+                            break;
+                        }
+                    }
+
+                    Invoke("NewGame", 3F);
+                }
+                else if(playersDead.Count == playerCount)
+                {
+                    Debug.Log("Game Ended!");
+                    inGame = false;
+
+                    // finding winner
+                    Debug.Log(playersDead[playerCount - 1] + " has won this round!");
+                    playersDead[playerCount - 1].GetComponent<PlayerProperties>().points += winPoints;
+                    playersDead[playerCount - 1].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+                    Invoke("NewGame", 3F);
+                }
+            }
+        }
     }
 
     public void NewGame()
     {
+        playersDead = new List<GameObject>();
+
         foreach (GameObject p in Players)
         {
+            p.GetComponent<PlayerHand>().enabled = true;
             p.GetComponent<PlayerHand>().roundReset();
+            p.GetComponent<PlayerProperties>().resetCards();
             p.GetComponent<PlayerHand>().handImg.GetComponent<Image>().color = new Color32(0, 0, 0, 93);
         }
 
@@ -97,9 +138,7 @@ public class PlayManager : MonoBehaviour
     public void StartBattle()
     {
         Debug.Log("Starting Match!");
-
-        //foreach (GameObject p in Players) p.SetActive(true);
-        foreach (GameObject a in deleteCards) Destroy(a);   // destroy all used cards
+        inGame = true;
 
         foreach (GameObject p in Players)
         {
