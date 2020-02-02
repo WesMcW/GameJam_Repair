@@ -12,7 +12,8 @@ public class DirectionalShield : Card
         if (!isActive)
         {
             int rand = Random.Range(0, 4);
-            GameObject temp = Instantiate(shield, myPlayer.transform.position, Quaternion.Euler(new Vector3(0, 0, rand * 90)));
+            GameObject temp = Instantiate(shield, myPlayer.transform.position, Quaternion.identity);
+            temp.transform.GetChild(0).rotation = Quaternion.Euler(new Vector3(0, 0, rand * 90));
             temp.transform.SetParent(myPlayer.transform);
         }
         isActive = true;

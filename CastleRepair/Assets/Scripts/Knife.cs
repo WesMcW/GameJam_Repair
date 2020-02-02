@@ -26,10 +26,6 @@ public class Knife : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (pierce)
-        {
-            if (!collision.gameObject.CompareTag("Player")) Destroy(gameObject);
-        }
-        else Destroy(gameObject);
+        if(!pierce) Destroy(gameObject);
     }
 }
