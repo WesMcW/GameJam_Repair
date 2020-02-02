@@ -79,6 +79,8 @@ public class PlayManager : MonoBehaviour
                 }
 
                 // start a countdown
+
+                // start curtain/countdown animation here
                 Invoke("StartBattle", 5F);
             }
         }
