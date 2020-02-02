@@ -3289,7 +3289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.3647059}
+  m_Color: {r: 0.3257387, g: 0.37539765, b: 0.3773585, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3624,6 +3624,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inGame: 0
   handPhase: 0
+  noWinPoints: 0
+  winPoints: 0
   readyPlayers: 0
   playersDead: []
   Maps:
@@ -3637,6 +3639,7 @@ MonoBehaviour:
   - {fileID: 7696445073226412956, guid: 5e5d224bdc074894caa077f60383a352, type: 3}
   - {fileID: 1162031518426027775, guid: d2598edff8e14da4688d323f867877e0, type: 3}
   winScreen: {fileID: 1196388542}
+  anim: {fileID: 1939779398}
 --- !u!4 &1507141757
 Transform:
   m_ObjectHideFlags: 0
@@ -5008,6 +5011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1939779397}
   - component: {fileID: 1939779398}
+  - component: {fileID: 1939779399}
   m_Layer: 0
   m_Name: Transition
   m_TagString: Untagged
@@ -5050,6 +5054,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1939779399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939779396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc99e426a8e9de41acf1c72f8a4828d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardStage: {fileID: 1234408566}
 --- !u!1 &2004944246
 GameObject:
   m_ObjectHideFlags: 0
