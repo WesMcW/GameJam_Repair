@@ -369,6 +369,7 @@ MonoBehaviour:
   - {fileID: 7739004735884935934, guid: ac731ff304cf3a24b932a3a229bdcbc0, type: 3}
   - {fileID: 7475550650850172296, guid: 71f94723ef4f757439b61d38d720970e, type: 3}
   - {fileID: 1097211945476253840, guid: 17b9189f0f5563145910caa416ce554f, type: 3}
+  - {fileID: 5890531280356816385, guid: 6e6c68aee703f6a47ae673669d2401b4, type: 3}
   readyColor:
     serializedVersion: 2
     rgba: 1567085671

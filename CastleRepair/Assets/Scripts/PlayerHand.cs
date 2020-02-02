@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHand : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerHand : MonoBehaviour
 
     public GameObject handImg;
     GameObject cardSpot;
+    public TextMeshProUGUI cardsPicked;
 
     /// <summary>The player properties on this game object</summary>
     private PlayerProperties myProperties;
@@ -45,7 +47,7 @@ public class PlayerHand : MonoBehaviour
         trigger = "Fire" + playerNum.ToString();
 
         // update this as more cards added; this is how many of each card type is in deck
-        myDeck = new int[14] { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
+        myDeck = new int[15] { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
         foreach (int i in myDeck) totalCards += i;
         highestButtonShown = -1;
         addManyCards(3);
@@ -107,6 +109,7 @@ public class PlayerHand : MonoBehaviour
                 myHand[index].GetComponent<Card>().used = true;
                 GetComponent<PlayerProperties>().equipCard(myHand[index].GetComponent<Card>());
                 activeCardCount++;
+                cardsPicked.text = "Picks Left: " + (maxCardCount - activeCardCount);
                 //myHand.RemoveAt(index);
             }
         }
@@ -135,7 +138,7 @@ public class PlayerHand : MonoBehaviour
             if (totalCards <= 0)
             {
                 // resets deck; so we wont run out of cards and be stuck in a loop
-                myDeck = new int[14] { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
+                myDeck = new int[15] { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
                 foreach (int i in myDeck) totalCards += i;
             }
 
@@ -149,6 +152,8 @@ public class PlayerHand : MonoBehaviour
                 cardSpot = handImg.transform.GetChild(0).gameObject;
                 buttonsUI = new GameObject[4];
                 for (int i = 0; i < 4; i++) buttonsUI[i] = handImg.transform.GetChild(6).GetChild(i).gameObject;
+                cardsPicked = handImg.transform.GetChild(7).GetComponent<TextMeshProUGUI>();
+
             }
             newCard.transform.SetParent(cardSpot.transform, false);
             myHand.Add(newCard);
