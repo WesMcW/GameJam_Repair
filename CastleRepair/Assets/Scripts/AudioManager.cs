@@ -16,6 +16,9 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip[] deathSounds;
 
+    [SerializeField]
+    private AudioClip dink;
+
     private void Awake()
     {
         if (instance == null || instance != this)
@@ -42,12 +45,6 @@ public class AudioManager : MonoBehaviour
         int randomDeath = Random.Range(0, 5);
         soundPlayer.PlayOneShot(deathSounds[randomDeath]);
     }
-    
-
-    public void SayHello()
-    {
-        print("Hello");
-    }
 
     public void ToggleBattle(bool inBattle)
     {
@@ -62,5 +59,10 @@ public class AudioManager : MonoBehaviour
             musicPlayer.clip = battleTheme;
             musicPlayer.Play();
         }
+    }
+
+    public void PlayDink()
+    {
+        soundPlayer.PlayOneShot(dink);
     }
 }
