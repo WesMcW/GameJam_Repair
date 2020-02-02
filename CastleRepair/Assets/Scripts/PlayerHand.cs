@@ -82,9 +82,14 @@ public class PlayerHand : MonoBehaviour
             }
         }
 
-        if(Input.GetAxis(trigger) < 0)
+        if (Input.GetAxis(trigger) < 0)
         {
             // show player num
+            handImg.GetComponent<Animator>().SetBool("ShowMe", true);
+        }
+        else
+        {
+            handImg.GetComponent<Animator>().SetBool("ShowMe", false);
         }
     }
 
