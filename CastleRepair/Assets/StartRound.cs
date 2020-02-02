@@ -14,11 +14,12 @@ public class StartRound : MonoBehaviour
     public void roundStart()
     {
         PlayManager.inst.StartBattle();
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     public void startCountDown()
     {
         //play countdown sound
+        AudioManager.instance.PlaySound(AudioManager.SoundClip.Countdown);
     }
 }
