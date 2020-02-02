@@ -273,13 +273,14 @@ GameObject:
   - component: {fileID: 8517514188485343915}
   - component: {fileID: 8517514188485343912}
   - component: {fileID: 8517514188485343914}
+  - component: {fileID: 1237989915}
   m_Layer: 0
   m_Name: Map1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8517514188485343915
 Transform:
   m_ObjectHideFlags: 0
@@ -360,13 +361,31 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.5
   m_Points:
   - {x: -7.6970735, y: 4.306451}
-  - {x: 7.672318, y: 4.3118896}
-  - {x: 7.67603, y: -4.3166366}
-  - {x: -7.6671686, y: -4.31537}
-  - {x: -7.662529, y: 4.352246}
+  - {x: 7.8489747, y: 4.311889}
+  - {x: 7.776978, y: -4.5941057}
+  - {x: -7.8438234, y: -4.567615}
+  - {x: -7.864422, y: 4.402695}
+--- !u!114 &1237989915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517514188485343913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d1768692f08174491cbdb35df8e2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isUsed: 00000000
+  PlayerSpawns:
+  - {x: -8, y: 4.1}
+  - {x: 8, y: 4.1}
+  - {x: 8, y: -4.1}
+  - {x: -8, y: -4.1}
 --- !u!1 &8517514188506287723
 GameObject:
   m_ObjectHideFlags: 0
