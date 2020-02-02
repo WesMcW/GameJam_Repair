@@ -8,7 +8,6 @@ public class PlayerMove : MonoBehaviour {
 
     private GameObject crosshairHolder; // The object on the center of the player that controls crosshair placement
 
-    private audio am;
 
     /*
      // If needed, a sprite that shows them dead
@@ -31,7 +30,7 @@ public class PlayerMove : MonoBehaviour {
     [SerializeField]
     private GameObject knife;
 
-    public float resetCD = 0.5F;
+    public float resetCD = 0.5f;
     private float fireCooldown;
     private bool canFire;
 
@@ -146,7 +145,7 @@ public class PlayerMove : MonoBehaviour {
 
         if (canFire)
         {
-            am.PlaySound(global::audio.SoundClip.KnifeThrow);
+            AudioManager.instance.PlaySound(AudioManager.SoundClip.KnifeThrow);
             canFire = false;
             fireCooldown = resetCD;
 
