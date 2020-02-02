@@ -54,12 +54,12 @@ public class AudioManager : MonoBehaviour
             musicPlayer.clip = mainTheme;
             musicPlayer.Play();
         }
-        else if (PlayManager.inst.currentMap != 4)
+        else if (PlayManager.inst.currentMap != 3)
         {
             musicPlayer.clip = battleTheme;
             musicPlayer.Play();
         }
-        else if (PlayManager.inst.currentMap == 4)
+        else
         {
             musicPlayer.clip = snowTheme;
             musicPlayer.Play();
