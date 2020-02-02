@@ -28,6 +28,8 @@ public class PlayManager : MonoBehaviour
     public GameObject[] PlayerPrefabs;
     public GameObject winScreen;
 
+    public Animator anim;
+
     private void Awake()
     {
         if (inst == null) inst = this;
@@ -70,20 +72,20 @@ public class PlayManager : MonoBehaviour
             // check if all players are ready, if all ready start game
             if(readyPlayers == playerCount)
             {
+                anim.SetTrigger("Trans");
+
                 Debug.Log("All players ready!");
 
                 handPhase = false;
-                CardScreen.SetActive(false);
+                //CardScreen.SetActive(false);
                 foreach (GameObject p in Players)
                 {
                     p.GetComponent<SpriteRenderer>().enabled = true;
                     p.transform.GetChild(0).gameObject.SetActive(true);
                 }
 
-                // start a countdown
-
                 // start curtain/countdown animation here
-                Invoke("StartBattle", 5F);
+                //Invoke("StartBattle", 4F);
             }
         }
         else
