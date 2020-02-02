@@ -190,8 +190,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 10.450001}
-  m_SizeDelta: {x: -40, y: -153.29999}
+  m_AnchoredPosition: {x: 0, y: 2.1500092}
+  m_SizeDelta: {x: -40, y: -136.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6592522077023940302
 CanvasRenderer:
@@ -359,7 +359,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 16}
-  m_SizeDelta: {x: -32, y: 50}
+  m_SizeDelta: {x: -32, y: 77.3}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &8221762456968681879
 CanvasRenderer:
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Have a shield protecting one side of you this round
+  m_text: Block all Hits from One Side
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b00b73524207ac4b8bf12faef0d9be2, type: 2}
   m_sharedMaterial: {fileID: 3162880483313603259, guid: 4b00b73524207ac4b8bf12faef0d9be2,
@@ -416,14 +416,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 1026
+  m_textAlignment: 514
   m_characterSpacing: 3
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 29
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -457,12 +457,12 @@ MonoBehaviour:
   m_margin: {x: 3.4044375, y: 0, z: 3.4044375, w: -0.7505743}
   m_textInfo:
     textComponent: {fileID: 2787716556008202665}
-    characterCount: 51
+    characterCount: 28
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 10
+    spaceCount: 5
+    wordCount: 6
     linkCount: 0
-    lineCount: 4
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
