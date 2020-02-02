@@ -9,11 +9,7 @@ public class Penalty_DisableCard : Card
     {
         target = Random.Range(0, PlayerPrefs.GetInt("PlayerCount"));
 
-        if (PlayManager.inst.Players[target].GetComponent<PlayerProperties>().points > 0)
-        {
-            myPlayer.GetComponent<PlayerProperties>().points++;
-            PlayManager.inst.Players[target].GetComponent<PlayerProperties>().points--;
-        }
+        Invoke("disableCard", 0.5F);
 
         isActive = true;
     }
@@ -26,8 +22,9 @@ public class Penalty_DisableCard : Card
         }
     }
 
-    void disableCard(GameObject player)
+    void disableCard()
     {
-
+        int rand = Random.Range(0, PlayManager.inst.Players[target].GetComponent<PlayerProperties>().active_cards.Count);
+        PlayManager.inst.Players[target].GetComponent<PlayerProperties>().active_cards[rand].setCardUnactivate(PlayManager.inst.Players[target]);
     }
 }
