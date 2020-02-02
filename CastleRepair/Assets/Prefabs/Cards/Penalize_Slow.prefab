@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 16}
-  m_SizeDelta: {x: -32, y: 50}
+  m_SizeDelta: {x: -32, y: 103.2}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1889756036891260548
 CanvasRenderer:
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Move Slightly Faster. Random Opponent Slows Down
+  m_text: Move Slightly Faster. Random Enemy Moves Slower
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b00b73524207ac4b8bf12faef0d9be2, type: 2}
   m_sharedMaterial: {fileID: 3162880483313603259, guid: 4b00b73524207ac4b8bf12faef0d9be2,
@@ -92,14 +92,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11
-  m_fontSizeBase: 11
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 1026
+  m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 29
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3325771290472007480}
-    characterCount: 48
+    characterCount: 47
     spriteCount: 0
     spaceCount: 6
     wordCount: 7
@@ -440,8 +440,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.4, y: 21.6}
-  m_SizeDelta: {x: -40, y: -69.99999}
+  m_AnchoredPosition: {x: -7.4, y: 33.550003}
+  m_SizeDelta: {x: -40, y: -93.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &653021067807743751
 CanvasRenderer:
