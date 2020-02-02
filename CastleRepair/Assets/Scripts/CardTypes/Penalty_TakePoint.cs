@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoublePoints : Card
+public class Penalty_TakePoint : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
