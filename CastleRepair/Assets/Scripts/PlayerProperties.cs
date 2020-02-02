@@ -52,7 +52,7 @@ public class PlayerProperties : MonoBehaviour
                 else
                 {
                     pointsTxt.text = "Points: " + points;
-                    scoreTxt.text = "Score: " + score;
+                    scoreTxt.text = score + "/20";
                     levelTxt.text = "Level: " + level;
                 }
             }
