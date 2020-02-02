@@ -6,16 +6,20 @@ public class audio : MonoBehaviour
 {
     public static audio instance;
 
-    public AudioSource countdown;
-    public AudioSource death1;
-    public AudioSource death2;
-    public AudioSource death3;
-    public AudioSource death4;
-    public AudioSource death5;
-    public AudioSource gameStart;
-    public AudioSource deflect;
-    public AudioSource knifeThrow;
-    public AudioSource knifeThrowRock;
+    //public AudioClip countdown, gameTheme, deflect, knifeThrow, knifeThrowRock, battleTheme;
+
+    [SerializeField]
+    private AudioClip[] allSoundClips;
+
+    private List<AudioSource> allSounds;
+    private List<AudioSource> allDeathSounds;
+
+    public enum SoundClip
+    {
+        Countdown, MainTheme, Deflection, KnifeThrow, KnifeHitRock, BattleTheme, Death, Mute
+    };
+
+    public AudioClip[] deathSounds;
 
     private void Awake()
     {
@@ -29,5 +33,66 @@ public class audio : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        allSounds = new List<AudioSource> { };
+        allDeathSounds = new List<AudioSource> { };
+
+        // Create audio sources of each of the clips
+        foreach (AudioClip c in allSoundClips)
+        {
+            AudioSource temp = gameObject.AddComponent<AudioSource>();
+            temp.clip = c;
+            allSounds.Add(temp);
+        }
+
+        foreach (AudioClip deathClip in deathSounds)
+        {
+            AudioSource temp = gameObject.AddComponent<AudioSource>();
+            temp.clip = deathClip;
+            allDeathSounds.Add(temp);
+        }
+    }
+
+    public void PlayDeathSound()
+    {
+        int randomDeath = Random.Range(0, 6);
+        allDeathSounds[randomDeath].Play();
+    }
+
+    public void PlaySound(SoundClip soundType)
+    {
+        switch (soundType)
+        {
+            case SoundClip.BattleTheme:
+                allSounds[0].Play();
+                break;
+            case SoundClip.Countdown:
+                allSounds[1].Play();
+                break;
+            case SoundClip.Deflection:
+                allSounds[2].Play();
+                break;
+            case SoundClip.KnifeHitRock:
+                allSounds[3].Play();
+                break;
+            case SoundClip.KnifeThrow:
+                allSounds[4].Play();
+                break;
+            case SoundClip.MainTheme:
+                allSounds[5].Play();
+                break;
+            case SoundClip.Death:
+                PlayDeathSound();
+                break;
+            case SoundClip.Mute:
+                foreach (AudioSource AS in allSounds)
+                {
+                    AS.Stop();
+                }
+                break;
+        }
     }
 }
