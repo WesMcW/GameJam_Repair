@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     [SerializeField]
-    private AudioClip mainTheme, battleTheme;
+    private AudioClip mainTheme, battleTheme, snowTheme;
 
     public AudioSource soundPlayer;
 
@@ -54,9 +54,14 @@ public class AudioManager : MonoBehaviour
             musicPlayer.clip = mainTheme;
             musicPlayer.Play();
         }
-        else
+        else if (PlayManager.inst.currentMap != 4)
         {
             musicPlayer.clip = battleTheme;
+            musicPlayer.Play();
+        }
+        else
+        {
+            musicPlayer.clip = snowTheme;
             musicPlayer.Play();
         }
     }

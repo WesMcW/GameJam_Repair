@@ -17,7 +17,7 @@ public class PlayManager : MonoBehaviour
     public bool noWinPoints = false;
 
     int playerCount;
-    int currentMap = -1;
+    public int currentMap = -1;
     public int winPoints;
     public int readyPlayers = 0;
     public List<GameObject> playersDead;

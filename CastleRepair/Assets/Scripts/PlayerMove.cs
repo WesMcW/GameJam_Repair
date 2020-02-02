@@ -32,7 +32,7 @@ public class PlayerMove : MonoBehaviour {
 
     private bool isDead;
 
-    private string hor, vert, rotx, roty, a, b, x, y, shoot;
+    private string hor, vert, rotx, roty, a, b, x, y, shoot, dash;
 
     /// <summary>If the inversion is on, change this to -1</summary>
     public int inversion = 1;
@@ -77,6 +77,7 @@ public class PlayerMove : MonoBehaviour {
         rotx = SetInputString("RotateX");
         roty = SetInputString("RotateY");
         shoot = SetInputString("Fire");
+        dash = SetInputString("Dash");
     }
 
     /// <summary>Cleaner function for setting the string, it just sets it as "inputtype" + playernum</summary>
@@ -89,11 +90,12 @@ public class PlayerMove : MonoBehaviour {
 
     void FixedUpdate()
     {
+        Dash();
 
         if (Input.GetAxis(shoot) > 0)
         {
             Shoot();
-        }
+        }        
 
         if (fireCooldown > 0)
         {
@@ -159,34 +161,38 @@ public class PlayerMove : MonoBehaviour {
           // how long the move speed will stay modified before reverting
 
         float temp = movementSpeed; // backs-up normal move speed
-
-        if (canDash)
+        if (Input.GetAxis(dash) > 0)
         {
-            if (!cooldown && !dashing) // if not on cooldown, and not currently dashing
+            if (canDash)
             {
-               dashing = true; // then begin dashing
-               movementSpeed = 42;
-
-             } else if ( dashing ) // if already dashing
-            {
-                dashDuration -= Time.deltaTime; // decrement from dash duration 
-                if ( dashDuration <= 0 ) // if dash duration hits 0
+                if (!cooldown && !dashing) // if not on cooldown, and not currently dashing
                 {
-                    movementSpeed = temp; // reset movement speed
-                    dashing = false; // player is no longer dashing
-                    dashDuration = 0.2f; // reset the duration timer
-                }
-            } else if ( cooldown ) // if player is on cooldown, or currently dashing...
-            {
-                cooldownTime -= Time.deltaTime; // derement cooldown timer
-                if ( cooldownTime < 0 ) // if ccooldown has counted down all the way
-                {
-                    cooldown = false; // dash is no longer on cooldown
-                }
-            
-            }
+                    dashing = true; // then begin dashing
+                    movementSpeed = 42;
 
-        }// else ignore this
+                }
+                else if (dashing) // if already dashing
+                {
+                    dashDuration -= Time.deltaTime; // decrement from dash duration 
+                    if (dashDuration <= 0) // if dash duration hits 0
+                    {
+                        movementSpeed = temp; // reset movement speed
+                        dashing = false; // player is no longer dashing
+                        dashDuration = 0.2f; // reset the duration timer
+                    }
+                }
+                else if (cooldown) // if player is on cooldown, or currently dashing...
+                {
+                    cooldownTime -= Time.deltaTime; // derement cooldown timer
+                    if (cooldownTime < 0) // if ccooldown has counted down all the way
+                    {
+                        cooldown = false; // dash is no longer on cooldown
+                    }
+
+                }
+
+            }// else ignore this
+        }
     }
 
 
