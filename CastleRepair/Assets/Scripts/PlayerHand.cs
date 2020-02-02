@@ -15,22 +15,28 @@ public class PlayerHand : MonoBehaviour
     public GameObject handImg;
     GameObject cardSpot;
 
+    /// <summary>The player properties on this game object</summary>
+    private PlayerProperties myProperties;
+
     public List<GameObject> myHand;
     public GameObject[] CardPrefs;
     int[] myDeck;   // [MoveSpeedCard, BarrierCard, ...]
     int totalCards = 0;
 
-    string a, b, x, y;
+    string a, b, x, y, start, select;
     //List<KeyCode> buttons;
 
     void Start()
     {
         playerNum = GetComponent<PlayerMove>().playerNum;
+        myProperties = GetComponent<PlayerProperties>();
 
         a = "A" + playerNum.ToString();
         b = "B" + playerNum.ToString();
         x = "X" + playerNum.ToString();
         y = "Y" + playerNum.ToString();
+        start = "Start" + playerNum.ToString();
+        select = "Select" + playerNum.ToString();
 
         // update this as more cards added; this is how many of each card type is in deck
         myDeck = new int[8] {10, 10, 1, 10, 10, 10, 10, 10 };
@@ -42,6 +48,15 @@ public class PlayerHand : MonoBehaviour
     {
         if (!ready)
         {
+            if (Input.GetButtonDown(start))
+            {
+                myProperties.buyScore();
+            }
+            if (Input.GetButtonDown(select))
+            {
+                myProperties.buyXP();
+            }
+
             if (activeCardCount < maxCardCount) // can add more cards
             {
                 if (Input.GetButtonDown(a)) useCard(0);
@@ -63,12 +78,13 @@ public class PlayerHand : MonoBehaviour
 
     void useCard(int index)
     {
-        if (myHand.Count > index)
+        if (myHand.Count > index && !myHand[index].GetComponent<Card>().used)
         {
-            myHand[index].GetComponent<Card>().setCardActive(gameObject);
+            //myHand[index].GetComponent<Card>().setCardActive(gameObject);
+            myHand[index].GetComponent<Card>().used = true;
             GetComponent<PlayerProperties>().equipCard(myHand[index].GetComponent<Card>());
             activeCardCount++;
-            myHand.RemoveAt(index);
+            //myHand.RemoveAt(index);
         }
     }
 

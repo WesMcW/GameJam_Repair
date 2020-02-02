@@ -11,4 +11,8 @@ public class MainScene : MonoBehaviour
         PlayerPrefs.SetInt("PlayerCount", GetComponent<PlayerCount>().players);
         SceneManager.LoadScene(SceneIndex);
     }
+    public void ScreenLoad(int SceneIndex)
+    {
+        SceneManager.LoadScene(SceneIndex);
+    }
 }
