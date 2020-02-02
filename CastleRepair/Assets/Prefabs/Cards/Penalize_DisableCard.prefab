@@ -63,7 +63,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: One Random Card is Blocked
+  m_text: one Random Card is Blocked
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b00b73524207ac4b8bf12faef0d9be2, type: 2}
   m_sharedMaterial: {fileID: 3162880483313603259, guid: 4b00b73524207ac4b8bf12faef0d9be2,
@@ -183,14 +183,14 @@ RectTransform:
   m_GameObject: {fileID: 3689160140487393435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 4354285698031585750}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 15.000004}
+  m_AnchoredPosition: {x: 0, y: -0.30000305}
   m_SizeDelta: {x: -40, y: -69.99999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8746010261999164049
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 201596b8b6f5e2f4ca576baaf25bf6ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8fa1fc4dde829924988a7103f4a86d0c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
