@@ -9990,6 +9990,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map3
       objectReference: {fileID: 0}
+    - target: {fileID: 8536592686825835182, guid: f60677722088a9048ba039d6c3fd339a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983611685258466649, guid: f60677722088a9048ba039d6c3fd339a,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.15106565
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983611685258466649, guid: f60677722088a9048ba039d6c3fd339a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.0821311
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f60677722088a9048ba039d6c3fd339a, type: 3}
 --- !u!1 &8983611685410590714 stripped
