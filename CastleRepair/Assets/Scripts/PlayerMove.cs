@@ -141,10 +141,10 @@ public class PlayerMove : MonoBehaviour {
 
     private void Shoot()
     {
-        print(playerNum + " is firing");
 
         if (canFire)
         {
+            print(playerNum + " is firing");
             AudioManager.instance.PlaySound(AudioManager.SoundClip.KnifeThrow);
             canFire = false;
             fireCooldown = resetCD;
