@@ -28,6 +28,7 @@ public class Knife : MonoBehaviour
     {
         if (!pierce)
         {
+            AudioManager.instance.PlayDink();
             Destroy(gameObject);
         }
     }
