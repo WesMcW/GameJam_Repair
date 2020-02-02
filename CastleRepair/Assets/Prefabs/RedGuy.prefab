@@ -228,6 +228,14 @@ MonoBehaviour:
   level: 1
   points: 0
   score: 0
+  castle: {fileID: 0}
+  castleSprites:
+  - {fileID: -5260175630729947354, guid: f2340c69035dfb3469d5c7633bf75302, type: 3}
+  - {fileID: -6754239384357436178, guid: f2340c69035dfb3469d5c7633bf75302, type: 3}
+  - {fileID: 6906767639317418099, guid: f2340c69035dfb3469d5c7633bf75302, type: 3}
+  - {fileID: 7803579835838553921, guid: f2340c69035dfb3469d5c7633bf75302, type: 3}
+  - {fileID: -1682882690250861636, guid: f2340c69035dfb3469d5c7633bf75302, type: 3}
+  - {fileID: -77001387259621195, guid: f2340c69035dfb3469d5c7633bf75302, type: 3}
   ignoreMe: 0
 --- !u!50 &353961405
 Rigidbody2D:

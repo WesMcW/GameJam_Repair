@@ -17,6 +17,10 @@ public class PlayerProperties : MonoBehaviour
     int xpToLevel = 2;
     public int points = 0;
     public int score = 0;
+    int castleState = 0;
+
+    Image castle;
+    public Sprite[] castleSprites;
 
     TextMeshProUGUI pointsTxt, scoreTxt, levelTxt;
 
@@ -109,15 +113,17 @@ public class PlayerProperties : MonoBehaviour
         if(points > 0)
         {
             xp++;
-            if(xp >= xpToLevel)
+            points--;
+            if (xp >= xpToLevel)
             {
                 xp -= xpToLevel;
                 level++;
                 xpToLevel *= 2;
                 GetComponent<PlayerHand>().maxCardCount++;
-                points--;
 
-
+                // level up stat boosts
+                GetComponent<PlayerMove>().movementSpeed += 1F;
+                GetComponent<PlayerMove>().resetCD -= 0.05F;
             }
         }
     }
@@ -128,6 +134,9 @@ public class PlayerProperties : MonoBehaviour
         {
             score++;
             points--;
+
+            // every 2 a piece is added
+            if (score % 2 == 1) updateCastle();
 
             // check for win
             PlayManager.inst.checkForWin(gameObject);
@@ -141,6 +150,7 @@ public class PlayerProperties : MonoBehaviour
         pointsTxt = tempHand.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
         scoreTxt = tempHand.transform.GetChild(3).GetComponent<TextMeshProUGUI>();
         levelTxt = tempHand.transform.GetChild(4).GetComponent<TextMeshProUGUI>();
+        castle = tempHand.transform.GetChild(5).GetComponent<Image>();
     }
 
     public void death(int playerKill)
@@ -156,5 +166,12 @@ public class PlayerProperties : MonoBehaviour
         PlayManager.inst.playersDead.Add(gameObject);
 
         PlayManager.inst.Players[playerKill - 1].GetComponent<PlayerProperties>().points++;
+    }
+
+    void updateCastle()
+    {
+        // increase castle state, change castle sprite
+        castleState++;
+        castle.sprite = castleSprites[castleState];
     }
 }
