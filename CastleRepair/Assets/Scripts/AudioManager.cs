@@ -8,9 +8,11 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     [SerializeField]
-    private AudioClip[] allSoundClips;
+    private AudioClip mainTheme, battleTheme;
 
-    public AudioSource soundPlayer; 
+    public AudioSource soundPlayer;
+
+    private AudioSource musicPlayer;
 
     public AudioClip[] deathSounds;
 
@@ -31,6 +33,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         soundPlayer = gameObject.AddComponent<AudioSource>();
+        musicPlayer = gameObject.AddComponent<AudioSource>();
     }
 
     public void PlayDeathSound()
@@ -43,5 +46,19 @@ public class AudioManager : MonoBehaviour
     public void SayHello()
     {
         print("Hello");
+    }
+
+    public void ToggleBattle(bool inBattle)
+    {
+        if (!inBattle)
+        {
+            musicPlayer.clip = mainTheme;
+            musicPlayer.Play();
+        }
+        else
+        {
+            musicPlayer.clip = battleTheme;
+            musicPlayer.Play();
+        }
     }
 }
