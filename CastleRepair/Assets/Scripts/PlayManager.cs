@@ -231,7 +231,7 @@ public class PlayManager : MonoBehaviour
                     CancelInvoke();
                     foreach (GameObject p in Players) p.SetActive(false);
                     winScreen.SetActive(true);
-                    winScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Player " + i + 1 + " wins!";
+                    winScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Player " + (i + 1) + " wins!";
                     break;
                 }
             }
@@ -248,7 +248,7 @@ public class PlayManager : MonoBehaviour
                     Players[i].SetActive(false);
                 }
                 winScreen.SetActive(true);
-                winScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Player " + winID + 1 + " wins!";
+                winScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Player " + (winID + 1) + " wins!";
             }
         }
     }

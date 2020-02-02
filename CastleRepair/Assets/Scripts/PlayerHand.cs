@@ -47,7 +47,7 @@ public class PlayerHand : MonoBehaviour
         trigger = "Fire" + playerNum.ToString();
 
         // update this as more cards added; this is how many of each card type is in deck
-        myDeck = new int[15] { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
+        myDeck = new int[14] { 7, 7, 7, 7, 7, 7, 1, 7, 7, 7, 7, 7, 7, 7};
         foreach (int i in myDeck) totalCards += i;
         highestButtonShown = -1;
         addManyCards(3);
@@ -139,7 +139,7 @@ public class PlayerHand : MonoBehaviour
             if (totalCards <= 0)
             {
                 // resets deck; so we wont run out of cards and be stuck in a loop
-                myDeck = new int[15] { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
+                myDeck = new int[14] { 7, 7, 7, 7, 7, 7, 1, 7, 7, 7, 7, 7, 7, 7 };
                 foreach (int i in myDeck) totalCards += i;
             }
 
