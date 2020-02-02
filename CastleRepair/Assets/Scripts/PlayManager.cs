@@ -8,7 +8,7 @@ public class PlayManager : MonoBehaviour
     public static PlayManager inst;
 
     // Used to treat player prefs like a variable
-    static string PlayerPrefsPlayerCount = "PlayerCount";
+    public static string PlayerPrefsPlayerCount = "PlayerCount";
 
     public bool inGame = false;
     public bool handPhase = false;
@@ -34,7 +34,7 @@ public class PlayManager : MonoBehaviour
     void Start()
     {
         playersDead = new List<GameObject>();
-        //PlayerPrefs.SetInt(PlayerPrefsPlayerCount, 2);
+        PlayerPrefs.SetInt(PlayerPrefsPlayerCount, 2);
 
         playerCount = PlayerPrefs.GetInt(PlayerPrefsPlayerCount);
 
