@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Card : MonoBehaviour
 {
-
+    public bool used = false;
     public bool isActive = false;
     public bool isPermanent = false;
 

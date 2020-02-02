@@ -34,7 +34,7 @@ public class PlayManager : MonoBehaviour
     void Start()
     {
         playersDead = new List<GameObject>();
-        PlayerPrefs.SetInt(PlayerPrefsPlayerCount, 2);
+        //PlayerPrefs.SetInt(PlayerPrefsPlayerCount, 2);
 
         playerCount = PlayerPrefs.GetInt(PlayerPrefsPlayerCount);
 
@@ -158,6 +158,7 @@ public class PlayManager : MonoBehaviour
 
         foreach (GameObject p in Players)
         {
+            p.GetComponent<PlayerProperties>().activateCards();
             p.GetComponent<PlayerMove>().enabled = true;
             p.GetComponent<PlayerHand>().enabled = false;
         }
@@ -192,8 +193,8 @@ public class PlayManager : MonoBehaviour
             int rand = Random.Range(0, 4);
             while(Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[rand]) rand = Random.Range(0, 4);
 
-            Players[i].transform.position = Maps[i].GetComponent<MapPlayerSpawns>().PlayerSpawns[rand];
-            Maps[i].GetComponent<MapPlayerSpawns>().isUsed[rand] = true;
+            Players[i].transform.position = Maps[currentMap].GetComponent<MapPlayerSpawns>().PlayerSpawns[rand];
+            Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[rand] = true;
         }
 
         for (int i = 0; i < Players.Length; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
