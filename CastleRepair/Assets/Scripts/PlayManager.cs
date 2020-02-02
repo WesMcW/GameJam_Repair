@@ -88,9 +88,10 @@ public class PlayManager : MonoBehaviour
                         {
                             Debug.Log(p.name + " has won this round!");
 
-                            p.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                            p.GetComponent<Animator>().SetFloat("Hor", 0);
-                            p.GetComponent<Animator>().SetFloat("Vert", 0);
+                            //p.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                            //p.GetComponent<Animator>().SetFloat("Hor", 0);
+                            //p.GetComponent<Animator>().SetFloat("Vert", 0);
+                            //p.transform.position = Vector3.zero;
 
                             p.GetComponent<PlayerProperties>().points += winPoints;
                             break;
@@ -110,9 +111,10 @@ public class PlayManager : MonoBehaviour
 
                     playersDead[playerCount - 1].GetComponent<PlayerProperties>().points += winPoints;
 
-                    playersDead[playerCount - 1].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                    playersDead[playerCount - 1].GetComponent<Animator>().SetFloat("Hor", 0);
-                    playersDead[playerCount - 1].GetComponent<Animator>().SetFloat("Vert", 0);
+                    //playersDead[playerCount - 1].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    //playersDead[playerCount - 1].GetComponent<Animator>().SetFloat("Hor", 0);
+                    //playersDead[playerCount - 1].GetComponent<Animator>().SetFloat("Vert", 0);
+                    //playersDead[playerCount - 1].transform.position = Vector3.zero;
 
                     checkForWin(null);
                     Invoke("NewGame", 3F);
@@ -127,6 +129,9 @@ public class PlayManager : MonoBehaviour
 
         foreach (GameObject p in Players)
         {
+            p.GetComponent<Animator>().SetFloat("Hor", 0);
+            p.GetComponent<Animator>().SetFloat("Vert", 0);
+            p.GetComponent<PlayerMove>().enabled = false;
             p.GetComponent<PlayerHand>().enabled = true;
             p.GetComponent<PlayerHand>().roundReset();
             p.GetComponent<PlayerProperties>().resetCards();
