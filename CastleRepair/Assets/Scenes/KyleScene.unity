@@ -235,6 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainTheme: {fileID: 8300000, guid: 01a51188019331b48802712e4ef4c9bc, type: 3}
   battleTheme: {fileID: 8300000, guid: 3bdd1205a254d6f45bf035baf6f86fee, type: 3}
+  snowTheme: {fileID: 8300000, guid: f9f484d45e8a9114480e776fe1148873, type: 3}
   soundPlayer: {fileID: 0}
   deathSounds:
   - {fileID: 8300000, guid: 915f5f2902e4dd640a1873fa503fbf8a, type: 3}
