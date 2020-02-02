@@ -144,14 +144,14 @@ MonoBehaviour:
   handImg: {fileID: 0}
   myHand: []
   CardPrefs:
-  - {fileID: 2866509890180660873, guid: 373bec585ba77764db9f6c2497c8fc8f, type: 3}
+  - {fileID: 4903476754742691181, guid: ebbe9ce21732d92489c1adae4dfd2f9f, type: 3}
   - {fileID: 5890531280356816385, guid: a8db23c9b35560b46a3a13212c534214, type: 3}
-  - {fileID: 4642333506202468322, guid: 26cfd79f8a7bc2943ac801e8224ab049, type: 3}
-  - {fileID: 393569909151538385, guid: e79b13f199b675745bf2a32aeea27c80, type: 3}
-  - {fileID: 8084290111427590886, guid: 1a55233301bb10e42b44f3a976297f31, type: 3}
-  - {fileID: 5988707987198443180, guid: c0a0d552feae2f2478572f93f94c3281, type: 3}
-  - {fileID: 6676924409627968367, guid: c9883e242751b3d4a85f0567b11841fc, type: 3}
-  - {fileID: 2804785811172212569, guid: ebbe9ce21732d92489c1adae4dfd2f9f, type: 3}
+  - {fileID: 5890531280356816385, guid: ebb12d9446f464f4eb5aea29e3b84a32, type: 3}
+  - {fileID: 5890531280356816385, guid: a8d48e175826c8945924ea22ca9d88ea, type: 3}
+  - {fileID: 5890531280356816385, guid: 15678e244de8fd64fa89d5ed37447b79, type: 3}
+  - {fileID: 5890531280356816385, guid: ed15ca9213916904fa5d59e3a944b592, type: 3}
+  - {fileID: 5890531280356816385, guid: e431ab39497e7674592525a7b61a455a, type: 3}
+  - {fileID: 5890531280356816385, guid: e5c7ab174556fd84f9cae7737ddfa0f0, type: 3}
 --- !u!61 &5446047314987185412
 BoxCollider2D:
   m_ObjectHideFlags: 0
