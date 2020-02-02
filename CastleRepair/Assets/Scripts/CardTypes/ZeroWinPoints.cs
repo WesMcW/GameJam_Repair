@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZeroWinPoints : MonoBehaviour
+public class ZeroWinPoints : Card
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void setCardActive(GameObject myPlayer)
     {
-        
+        PlayManager.inst.noWinPoints = true;
+        isActive = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void setCardUnactivate(GameObject myPlayer)
     {
-        
+        if (!GetComponent<PlayerProperties>().isDead && !PlayManager.inst.inGame) GetComponent<PlayerProperties>().points += PlayManager.inst.winPoints;
+        PlayManager.inst.noWinPoints = false;
+        isActive = false;
     }
 }

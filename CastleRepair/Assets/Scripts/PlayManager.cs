@@ -14,9 +14,11 @@ public class PlayManager : MonoBehaviour
     public bool inGame = false;
     public bool handPhase = false;
 
+    public bool noWinPoints = false;
+
     int playerCount;
     int currentMap = -1;
-    int winPoints;
+    public int winPoints;
     public int readyPlayers = 0;
     public List<GameObject> playersDead;
 
@@ -106,7 +108,7 @@ public class PlayManager : MonoBehaviour
                             //p.GetComponent<Animator>().SetFloat("Vert", 0);
                             //p.transform.position = Vector3.zero;
 
-                            p.GetComponent<PlayerProperties>().points += winPoints;
+                            if(!noWinPoints) p.GetComponent<PlayerProperties>().points += winPoints;
                             //break;
                         }
                     }
@@ -122,7 +124,7 @@ public class PlayManager : MonoBehaviour
                     // finding winner
                     Debug.Log(playersDead[playerCount - 1] + " has won this round!");
 
-                    playersDead[playerCount - 1].GetComponent<PlayerProperties>().points += winPoints;
+                    if (!noWinPoints) playersDead[playerCount - 1].GetComponent<PlayerProperties>().points += winPoints;
 
                     //playersDead[playerCount - 1].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     //playersDead[playerCount - 1].GetComponent<Animator>().SetFloat("Hor", 0);

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SpeedUpgrade : Card
 {
-    
-
     public override void setCardActive(GameObject myPlayer)
     {
         if(!isActive) myPlayer.GetComponent<PlayerMove>().movementSpeed *= 1.5F;
