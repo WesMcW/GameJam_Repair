@@ -50,6 +50,7 @@ public class AudioManager : MonoBehaviour
 
     public void ToggleBattle(bool inBattle)
     {
+        musicPlayer.Stop();
         if (!inBattle)
         {
             musicPlayer.clip = mainTheme;

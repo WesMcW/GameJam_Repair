@@ -23,6 +23,7 @@ public class StartRound : MonoBehaviour
     public void startCountDown()
     {
         //play countdown sound
+        AudioManager.instance.ToggleBattle(true);
         AudioManager.instance.soundPlayer.PlayOneShot(countdownSound);
     }
 }

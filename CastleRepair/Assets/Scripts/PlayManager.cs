@@ -97,6 +97,7 @@ public class PlayManager : MonoBehaviour
                 {
                     Debug.Log("Game Ended!");
                     inGame = false;
+                    AudioManager.instance.ToggleBattle(false);
 
                     foreach (GameObject p in Players)
                     {
