@@ -129,7 +129,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 3.240961, y: 0.7382096, z: 3.215039, w: 0}
   m_textInfo:
     textComponent: {fileID: 8082807522207491407}
     characterCount: 9
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 3.2459354, y: 0.24921414, z: 3.2459362, w: -1.4636852}
   m_textInfo:
     textComponent: {fileID: 5468160670819994821}
     characterCount: 42
@@ -292,7 +292,7 @@ MonoBehaviour:
     spaceCount: 9
     wordCount: 10
     linkCount: 0
-    lineCount: 2
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -338,7 +338,7 @@ RectTransform:
   m_GameObject: {fileID: 8084290111427590886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3898306, y: 10.169492, z: 0}
+  m_LocalScale: {x: 5, y: 10, z: 0}
   m_Children:
   - {fileID: 7047340751447196532}
   - {fileID: 4252859756966381912}
@@ -371,12 +371,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8882152, g: 0.9056604, b: 0.51690996, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d062bc55b7d129d43afdcd56ad1f60c8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
