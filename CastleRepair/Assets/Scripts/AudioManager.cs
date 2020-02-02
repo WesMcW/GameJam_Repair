@@ -39,7 +39,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayDeathSound()
     {
-        int randomDeath = Random.Range(0, 6);
+        int randomDeath = Random.Range(0, 5);
         soundPlayer.PlayOneShot(deathSounds[randomDeath]);
     }
     
