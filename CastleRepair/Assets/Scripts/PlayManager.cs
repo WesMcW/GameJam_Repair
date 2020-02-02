@@ -86,7 +86,11 @@ public class PlayManager : MonoBehaviour
                         if (!p.GetComponent<PlayerProperties>().isDead)
                         {
                             Debug.Log(p.name + " has won this round!");
+
                             p.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                            p.GetComponent<Animator>().SetFloat("Hor", 0);
+                            p.GetComponent<Animator>().SetFloat("Vert", 0);
+
                             p.GetComponent<PlayerProperties>().points += winPoints;
                             break;
                         }
@@ -101,8 +105,12 @@ public class PlayManager : MonoBehaviour
 
                     // finding winner
                     Debug.Log(playersDead[playerCount - 1] + " has won this round!");
+
                     playersDead[playerCount - 1].GetComponent<PlayerProperties>().points += winPoints;
+
                     playersDead[playerCount - 1].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    playersDead[playerCount - 1].GetComponent<Animator>().SetFloat("Hor", 0);
+                    playersDead[playerCount - 1].GetComponent<Animator>().SetFloat("Vert", 0);
 
                     Invoke("NewGame", 3F);
                 }
@@ -164,7 +172,7 @@ public class PlayManager : MonoBehaviour
             p.GetComponent<PlayerHand>().enabled = true;
         }
 
-        currentMap = Random.Range(0, 4);
+        currentMap = Random.Range(0, Maps.Length);
         Maps[currentMap].SetActive(true);
 
         winPoints = Random.Range(1, 4);
@@ -173,8 +181,8 @@ public class PlayManager : MonoBehaviour
         // place players in their spawnpoints
         for (int i = 0; i < Players.Length; i++)
         {
-            int rand = Random.Range(0, 3);
-            while(Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[rand]) rand = Random.Range(0, 3);
+            int rand = Random.Range(0, 4);
+            while(Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[rand]) rand = Random.Range(0, 4);
 
             Players[i].transform.position = Maps[i].GetComponent<MapPlayerSpawns>().PlayerSpawns[rand];
             Maps[i].GetComponent<MapPlayerSpawns>().isUsed[rand] = true;
