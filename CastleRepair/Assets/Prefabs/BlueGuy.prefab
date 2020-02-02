@@ -202,7 +202,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
+  knifeThrow: {fileID: 0}
+  knifeDeflect: {fileID: 0}
   movementSpeed: 0
+  inversion: 1
   knife: {fileID: 12063720034261493, guid: be347ce39d6c1bd4ea7f2cbea87a9669, type: 3}
   resetCD: 0.5
   multiShot: 0
@@ -231,7 +234,7 @@ MonoBehaviour:
   - {fileID: 5890531280356816385, guid: a8d48e175826c8945924ea22ca9d88ea, type: 3}
   - {fileID: 5890531280356816385, guid: 15678e244de8fd64fa89d5ed37447b79, type: 3}
   - {fileID: 5890531280356816385, guid: ed15ca9213916904fa5d59e3a944b592, type: 3}
-  - {fileID: 5890531280356816385, guid: e431ab39497e7674592525a7b61a455a, type: 3}
+  - {fileID: 571773176149134940, guid: edca82db09d0a12458831c9965fb819e, type: 3}
   - {fileID: 5890531280356816385, guid: e5c7ab174556fd84f9cae7737ddfa0f0, type: 3}
   - {fileID: 8426330831387587564, guid: d02f70fe927f5dc42bbf947b781bd415, type: 3}
   - {fileID: 7813878941630076164, guid: c9768de685c6f414c81554408fee2f3a, type: 3}
@@ -239,7 +242,6 @@ MonoBehaviour:
   - {fileID: 7739004735884935934, guid: ac731ff304cf3a24b932a3a229bdcbc0, type: 3}
   - {fileID: 7475550650850172296, guid: 71f94723ef4f757439b61d38d720970e, type: 3}
   - {fileID: 1097211945476253840, guid: 17b9189f0f5563145910caa416ce554f, type: 3}
-  - {fileID: 571773176149134940, guid: edca82db09d0a12458831c9965fb819e, type: 3}
 --- !u!50 &6109385668940460535
 Rigidbody2D:
   serializedVersion: 4
