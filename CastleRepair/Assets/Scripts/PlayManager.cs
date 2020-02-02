@@ -152,8 +152,9 @@ public class PlayManager : MonoBehaviour
             p.GetComponent<Animator>().SetFloat("Vert", 0);
             p.GetComponent<PlayerMove>().enabled = false;
             p.GetComponent<PlayerHand>().enabled = true;
-            p.GetComponent<PlayerHand>().roundReset();
             p.GetComponent<PlayerProperties>().resetCards();
+            p.GetComponent<PlayerHand>().roundReset();
+            //p.GetComponent<PlayerProperties>().resetCards();
             p.GetComponent<PlayerHand>().handImg.GetComponent<Image>().color = p.GetComponent<PlayerHand>().menuColor;
         }
 
