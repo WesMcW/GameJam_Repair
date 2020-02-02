@@ -34,6 +34,7 @@ public class AudioManager : MonoBehaviour
     {
         soundPlayer = gameObject.AddComponent<AudioSource>();
         musicPlayer = gameObject.AddComponent<AudioSource>();
+        ToggleBattle(false);
     }
 
     public void PlayDeathSound()
