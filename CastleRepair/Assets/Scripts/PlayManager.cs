@@ -224,7 +224,7 @@ public class PlayManager : MonoBehaviour
         {
             for (int i = 0; i < playerCount; i++)
             {
-                if (Players[i].GetComponent<PlayerProperties>().score >= 10)
+                if (Players[i].GetComponent<PlayerProperties>().score >= 20)
                 {
                     CancelInvoke();
                     foreach (GameObject p in Players) p.SetActive(false);
@@ -236,7 +236,7 @@ public class PlayManager : MonoBehaviour
         }
         else
         {
-            if(winner.GetComponent<PlayerProperties>().score >= 10)
+            if(winner.GetComponent<PlayerProperties>().score >= 20)
             {
                 CancelInvoke();
                 int winID = -1;

@@ -137,7 +137,7 @@ public class PlayerProperties : MonoBehaviour
             points--;
 
             // every 2 a piece is added
-            if (score % 2 == 1) updateCastle();
+            if (score % 4 == 1) updateCastle();
 
             // check for win
             PlayManager.inst.checkForWin(gameObject);
