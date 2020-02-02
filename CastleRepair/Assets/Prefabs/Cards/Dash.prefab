@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 5826955899689535101}
   - component: {fileID: 89910834703343093}
   - component: {fileID: 4548351601512770398}
-  - component: {fileID: 4302245281633857159}
+  - component: {fileID: -2950223489794808418}
   m_Layer: 0
   m_Name: Dash
   m_TagString: Untagged
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4302245281633857159
+--- !u!114 &-2950223489794808418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5890531280356816385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e442de6fa685e14d9a31f186cdf4ca5, type: 3}
+  m_Script: {fileID: 11500000, guid: 32e0022877dce20488949f18e14171ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
