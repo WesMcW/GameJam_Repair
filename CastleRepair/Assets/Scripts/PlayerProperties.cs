@@ -140,6 +140,8 @@ public class PlayerProperties : MonoBehaviour
         GetComponent<PlayerMove>().enabled = false;
         //GetComponent<PlayerHand>().enabled = true;
 
+        GetComponent<Animator>().SetFloat("Hor", 0);
+        GetComponent<Animator>().SetFloat("Vert", 0);
         PlayManager.inst.playersDead.Add(gameObject);
 
         PlayManager.inst.Players[playerKill - 1].GetComponent<PlayerProperties>().points++;
