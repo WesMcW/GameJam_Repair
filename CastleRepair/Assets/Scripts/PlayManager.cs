@@ -142,6 +142,7 @@ public class PlayManager : MonoBehaviour
 
     public void NewGame()
     {
+        if(currentMap != -1) for (int i = 0; i < Players.Length; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
         playersDead = new List<GameObject>();
 
         foreach (GameObject p in Players)
@@ -214,7 +215,7 @@ public class PlayManager : MonoBehaviour
             Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[rand] = true;
         }
 
-        for (int i = 0; i < Players.Length; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
+        //for (int i = 0; i < Players.Length; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
     }
 
     public void checkForWin(GameObject winner)
