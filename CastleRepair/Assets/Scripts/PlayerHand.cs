@@ -39,7 +39,7 @@ public class PlayerHand : MonoBehaviour
         select = "Select" + playerNum.ToString();
 
         // update this as more cards added; this is how many of each card type is in deck
-        myDeck = new int[8] {10, 10, 1, 10, 10, 10, 10, 10 };
+        myDeck = new int[14] { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
         foreach (int i in myDeck) totalCards += i;
         addManyCards(3);
     }
@@ -92,28 +92,32 @@ public class PlayerHand : MonoBehaviour
     {
         activeCardCount = 0;
         if (myHand.Count < 4) drawCard();
+        if (GetComponent<PlayerProperties>().level > 2 && myHand.Count < 4) drawCard();
         ready = false;
     }
 
     void drawCard()
     {
-        if(totalCards <= 0)
+        if (myHand.Count < 4)
         {
-            // resets deck; so we wont run out of cards and be stuck in a loop
-            myDeck = new int[8] { 10, 10, 1, 10, 10, 10, 10, 10 };
-            foreach (int i in myDeck) totalCards += i;
-        }
-        
-        int rand = Random.Range(0, myDeck.Length);
-        while(myDeck[rand] <= 0) rand = Random.Range(0, myDeck.Length);
+            if (totalCards <= 0)
+            {
+                // resets deck; so we wont run out of cards and be stuck in a loop
+                myDeck = new int[8] { 10, 10, 1, 10, 10, 10, 10, 10 };
+                foreach (int i in myDeck) totalCards += i;
+            }
 
-        // instantiate new card in the hand, put it in the hand, subtract from the deck
-        GameObject newCard = Instantiate(CardPrefs[rand]);
-        if (cardSpot == null) cardSpot = handImg.transform.GetChild(0).gameObject;
-        newCard.transform.SetParent(cardSpot.transform);
-        myHand.Add(newCard);
-        myDeck[rand]--;
-        totalCards--;
+            int rand = Random.Range(0, myDeck.Length);
+            while (myDeck[rand] <= 0) rand = Random.Range(0, myDeck.Length);
+
+            // instantiate new card in the hand, put it in the hand, subtract from the deck
+            GameObject newCard = Instantiate(CardPrefs[rand]);
+            if (cardSpot == null) cardSpot = handImg.transform.GetChild(0).gameObject;
+            newCard.transform.SetParent(cardSpot.transform, false);
+            myHand.Add(newCard);
+            myDeck[rand]--;
+            totalCards--;
+        }
     }
 
     public void addManyCards(int count)
