@@ -11,7 +11,7 @@ public class FirstPlacePoint : Card
 
     public override void setCardUnactivate(GameObject myPlayer)
     {
-        if (!GetComponent<PlayerProperties>().isDead && !PlayManager.inst.inGame) GetComponent<PlayerProperties>().points++;
+        if (!myPlayer.GetComponent<PlayerProperties>().isDead && !PlayManager.inst.inGame) GetComponent<PlayerProperties>().points++;
         isActive = false; 
     }
 }

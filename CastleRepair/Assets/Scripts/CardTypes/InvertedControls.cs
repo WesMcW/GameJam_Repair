@@ -14,7 +14,10 @@ public class InvertedControls : Card
     public override void setCardUnactivate(GameObject myPlayer)
     {
         // reset player controls
-        if (!GetComponent<PlayerProperties>().isDead && !PlayManager.inst.inGame) GetComponent<PlayerProperties>().points += 3;
+        if (!myPlayer.GetComponent<PlayerProperties>().isDead)
+        {
+            if (!PlayManager.inst.inGame) myPlayer.GetComponent<PlayerProperties>().points += 3;
+        }
         isActive = false;
         myPlayer.GetComponent<PlayerMove>().inversion = 1;
     }
