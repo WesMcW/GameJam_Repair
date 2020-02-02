@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InvertedControls : MonoBehaviour
+public class InvertedControls : Card
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void setCardActive(GameObject myPlayer)
     {
-        
+        // invert player controls
+        isActive = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void setCardUnactivate(GameObject myPlayer)
     {
-        
+        // reset player controls
+        if (!GetComponent<PlayerProperties>().isDead && !PlayManager.inst.inGame) GetComponent<PlayerProperties>().points += 3;
+        isActive = false;
     }
 }
