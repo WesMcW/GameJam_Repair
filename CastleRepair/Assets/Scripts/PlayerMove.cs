@@ -18,6 +18,8 @@ public class PlayerMove : MonoBehaviour {
     private Sprite player_dead;
     */
 
+    public bool canDash;
+
     private Rigidbody2D myRigidBody;
 
     private BoxCollider2D[] myCollider;
@@ -25,6 +27,8 @@ public class PlayerMove : MonoBehaviour {
     private Animator anim;
 
     public float movementSpeed;
+
+    
 
     private bool isDead;
 
@@ -52,6 +56,7 @@ public class PlayerMove : MonoBehaviour {
         SetPlayerControls();
         movementSpeed = 5f;
         canFire = true;
+        canDash = false;
         anim = GetComponent<Animator>();
     }
 
@@ -144,6 +149,46 @@ public class PlayerMove : MonoBehaviour {
             crosshairHolder.transform.rotation = Quaternion.AngleAxis(90 - angle, Vector3.forward);
         }
     }
+
+    private void Dash()
+    {
+        bool cooldown, dashing;
+        cooldown = dashing = false;
+        float cooldownTime = 2.0f; // time between available dashes
+        float dashDuration = 0.2f;
+          // how long the move speed will stay modified before reverting
+
+        float temp = movementSpeed; // backs-up normal move speed
+
+        if (canDash)
+        {
+            if (!cooldown && !dashing) // if not on cooldown, and not currently dashing
+            {
+               dashing = true; // then begin dashing
+               movementSpeed = 42;
+
+             } else if ( dashing ) // if already dashing
+            {
+                dashDuration -= Time.deltaTime; // decrement from dash duration 
+                if ( dashDuration <= 0 ) // if dash duration hits 0
+                {
+                    movementSpeed = temp; // reset movement speed
+                    dashing = false; // player is no longer dashing
+                    dashDuration = 0.2f; // reset the duration timer
+                }
+            } else if ( cooldown ) // if player is on cooldown, or currently dashing...
+            {
+                cooldownTime -= Time.deltaTime; // derement cooldown timer
+                if ( cooldownTime < 0 ) // if ccooldown has counted down all the way
+                {
+                    cooldown = false; // dash is no longer on cooldown
+                }
+            
+            }
+
+        }// else ignore this
+    }
+
 
     private void Shoot()
     {
