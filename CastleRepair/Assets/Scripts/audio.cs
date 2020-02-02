@@ -15,6 +15,7 @@ public class audio : MonoBehaviour
     public AudioSource gameStart;
     public AudioSource deflect;
     public AudioSource knifeThrow;
+    public AudioSource knifeThrowRock;
 
     private void Awake()
     {
