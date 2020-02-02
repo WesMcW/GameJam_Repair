@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class audio : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
-    public static audio instance;
+
+    public static AudioManager instance;
 
     //public AudioClip countdown, gameTheme, deflect, knifeThrow, knifeThrowRock, battleTheme;
 
@@ -23,7 +24,7 @@ public class audio : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
+        if (instance == null || instance != this)
         {
             instance = this;
         }
@@ -94,5 +95,10 @@ public class audio : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void SayHello()
+    {
+        print("Hello");
     }
 }

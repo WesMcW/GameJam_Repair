@@ -2,17 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Penalty_LongerCD : MonoBehaviour
+public class Penalty_LongerCD : Card
 {
-    // Start is called before the first frame update
-    void Start()
+    int target;
+    public override void setCardActive(GameObject myPlayer)
     {
-        
+        target = Random.Range(0, PlayerPrefs.GetInt("PlayerCount"));
+        PlayManager.inst.Players[target].GetComponent<PlayerMove>().resetCD /= 0.75F;
+
+        myPlayer.GetComponent<PlayerMove>().resetCD *= 0.75F;
+
+        isActive = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void setCardUnactivate(GameObject myPlayer)
     {
-        
+        if (!isPermanent)
+        {
+            PlayManager.inst.Players[target].GetComponent<PlayerMove>().resetCD *= 0.75F;
+            myPlayer.GetComponent<PlayerMove>().resetCD /= 0.75F;
+
+            isActive = false;
+        }
     }
 }
