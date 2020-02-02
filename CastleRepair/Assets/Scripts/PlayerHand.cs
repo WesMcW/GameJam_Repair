@@ -28,6 +28,9 @@ public class PlayerHand : MonoBehaviour
     string a, b, x, y, start, select, trigger;
     //List<KeyCode> buttons;
 
+    public GameObject[] buttonsUI;
+    public int highestButtonShown = 0;
+
     void Start()
     {
         playerNum = GetComponent<PlayerMove>().playerNum;
@@ -140,11 +143,19 @@ public class PlayerHand : MonoBehaviour
 
             // instantiate new card in the hand, put it in the hand, subtract from the deck
             GameObject newCard = Instantiate(CardPrefs[rand]);
-            if (cardSpot == null) cardSpot = handImg.transform.GetChild(0).gameObject;
+            if (cardSpot == null)
+            {
+                cardSpot = handImg.transform.GetChild(0).gameObject;
+                buttonsUI = new GameObject[4];
+                for (int i = 0; i < 4; i++) buttonsUI[i] = handImg.transform.GetChild(6).GetChild(i).gameObject;
+            }
             newCard.transform.SetParent(cardSpot.transform, false);
             myHand.Add(newCard);
             myDeck[rand]--;
             totalCards--;
+
+            buttonsUI[highestButtonShown].SetActive(true);
+            highestButtonShown++;
         }
     }
 

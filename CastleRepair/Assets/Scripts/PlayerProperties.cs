@@ -102,6 +102,9 @@ public class PlayerProperties : MonoBehaviour
         {
             if(a.isActive) a.setCardUnactivate(gameObject);
             Destroy(a.gameObject);
+
+            GetComponent<PlayerHand>().buttonsUI[GetComponent<PlayerHand>().highestButtonShown - 1].SetActive(false);
+            GetComponent<PlayerHand>().highestButtonShown--;
         }
 
         active_cards = new List<Card>();
