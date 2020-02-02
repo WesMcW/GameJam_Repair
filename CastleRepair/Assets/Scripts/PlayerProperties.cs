@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using static AudioManager;
 
 public class PlayerProperties : MonoBehaviour
 {
@@ -166,6 +167,8 @@ public class PlayerProperties : MonoBehaviour
         PlayManager.inst.playersDead.Add(gameObject);
 
         PlayManager.inst.Players[playerKill - 1].GetComponent<PlayerProperties>().points++;
+
+        instance.PlayDeathSound();
     }
 
     void updateCastle()

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using static AudioManager;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
@@ -8,6 +9,8 @@ public class PlayerMove : MonoBehaviour {
 
     private GameObject crosshairHolder; // The object on the center of the player that controls crosshair placement
 
+    [SerializeField]
+    private AudioClip knifeThrow, knifeDeflect;
 
     /*
      // If needed, a sprite that shows them dead
@@ -148,7 +151,8 @@ public class PlayerMove : MonoBehaviour {
         if (canFire)
         {
             print(playerNum + " is firing");
-            AudioManager.instance.PlaySound(AudioManager.SoundClip.KnifeThrow);
+            //AudioManager.instance.PlaySound(AudioManager.SoundClip.KnifeThrow);
+            instance.soundPlayer.PlayOneShot(knifeThrow);
             canFire = false;
             fireCooldown = resetCD;
 
