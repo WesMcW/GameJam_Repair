@@ -228,7 +228,6 @@ MonoBehaviour:
   level: 1
   points: 0
   score: 0
-  castle: {fileID: 0}
   castleSprites:
   - {fileID: -5260175630729947354, guid: f2340c69035dfb3469d5c7633bf75302, type: 3}
   - {fileID: -6754239384357436178, guid: f2340c69035dfb3469d5c7633bf75302, type: 3}
