@@ -13,6 +13,7 @@ public class MainScene : MonoBehaviour
     }
     public void ScreenLoad(int SceneIndex)
     {
+        Destroy(AudioManager.instance.gameObject);
         SceneManager.LoadScene(SceneIndex);
     }
 }
