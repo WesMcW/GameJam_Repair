@@ -8,13 +8,15 @@ public class MainScene : MonoBehaviour
 
    public void ScreenLoader(int SceneIndex)
     {
-        Destroy(AudioManager.instance.gameObject);
+        if (SceneIndex != 1) Destroy(AudioManager.instance.gameObject);
+
         PlayerPrefs.SetInt("PlayerCount", GetComponent<PlayerCount>().players);
         SceneManager.LoadScene(SceneIndex);
     }
     public void ScreenLoad(int SceneIndex)
     {
-        Destroy(AudioManager.instance.gameObject);
+        if (SceneIndex != 1) Destroy(AudioManager.instance.gameObject);
+
         SceneManager.LoadScene(SceneIndex);
     }
 }
