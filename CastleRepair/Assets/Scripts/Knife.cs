@@ -26,6 +26,10 @@ public class Knife : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(!pierce) Destroy(gameObject);
+        if (!pierce)
+        {
+            AudioManager.instance.PlayDink();
+            Destroy(gameObject);
+        }
     }
 }
