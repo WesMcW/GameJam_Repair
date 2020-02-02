@@ -94,7 +94,7 @@ public class PlayManager : MonoBehaviour
                             //p.transform.position = Vector3.zero;
 
                             p.GetComponent<PlayerProperties>().points += winPoints;
-                            break;
+                            //break;
                         }
                     }
 

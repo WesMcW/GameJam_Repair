@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3921951630684998701}
-  - component: {fileID: 7663887981921479351}
+  - component: {fileID: 2387863086713640920}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &7663887981921479351
+--- !u!61 &2387863086713640920
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 41.290688, y: -0.000076293945}
+  m_Offset: {x: 0.997908, y: 0.0023691058}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.369137, y: 66.45068}
+  m_Size: {x: 0.122978926, y: 1.4027609}
   m_EdgeRadius: 0
 --- !u!1 &7094862478971397266
 GameObject:
@@ -83,8 +83,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7094862478971397266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.43, y: 0, z: 0}
-  m_LocalScale: {x: 0.477015, y: 6.2138023, z: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 0.006, y: 0.13, z: 1}
   m_Children: []
   m_Father: {fileID: 3921951630684998701}
   m_RootOrder: 0
