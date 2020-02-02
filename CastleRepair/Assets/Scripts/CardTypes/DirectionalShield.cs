@@ -15,6 +15,7 @@ public class DirectionalShield : Card
             GameObject temp = Instantiate(shield, myPlayer.transform.position, Quaternion.identity);
             temp.transform.GetChild(0).rotation = Quaternion.Euler(new Vector3(0, 0, rand * 90));
             temp.transform.SetParent(myPlayer.transform);
+            myShield = temp;
         }
         isActive = true;
     }
