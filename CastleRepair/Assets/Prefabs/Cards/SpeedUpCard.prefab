@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 2866509890180660873}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 15, z: 0}
+  m_LocalScale: {x: 5, y: 10, z: 0}
   m_Children:
   - {fileID: 1218103999128237434}
   - {fileID: 545323193599496119}
@@ -61,12 +61,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.50064385, g: 0.7372549, b: 0.4, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d062bc55b7d129d43afdcd56ad1f60c8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 3.1917968, y: 0, z: 3.1918025, w: -0.63171387}
   m_textInfo:
     textComponent: {fileID: 9133240038926310203}
     characterCount: 38
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 3.219147, y: 0.711731, z: 3.166376, w: 0}
   m_textInfo:
     textComponent: {fileID: 7979105611832491087}
     characterCount: 8
