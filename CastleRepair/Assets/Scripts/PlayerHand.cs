@@ -23,7 +23,9 @@ public class PlayerHand : MonoBehaviour
     int[] myDeck;   // [MoveSpeedCard, BarrierCard, ...]
     int totalCards = 0;
 
-    string a, b, x, y, start, select;
+    public Color32 readyColor, menuColor;
+
+    string a, b, x, y, start, select, trigger;
     //List<KeyCode> buttons;
 
     void Start()
@@ -37,6 +39,7 @@ public class PlayerHand : MonoBehaviour
         y = "Y" + playerNum.ToString();
         start = "Start" + playerNum.ToString();
         select = "Select" + playerNum.ToString();
+        trigger = "Fire" + playerNum.ToString();
 
         // update this as more cards added; this is how many of each card type is in deck
         myDeck = new int[14] { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
@@ -48,6 +51,10 @@ public class PlayerHand : MonoBehaviour
     {
         if (!ready)
         {
+            if(Input.GetAxis(trigger) > 0)
+            {
+                triggerReady();
+            }
             if (Input.GetButtonDown(start))
             {
                 myProperties.buyScore();
@@ -71,8 +78,13 @@ public class PlayerHand : MonoBehaviour
                 ready = true;
                 PlayManager.inst.readyPlayers++;
 
-                handImg.GetComponent<Image>().color = new Color32(18, 58, 8, 93);
+                handImg.GetComponent<Image>().color = readyColor;
             }
+        }
+
+        if(Input.GetAxis(trigger) < 0)
+        {
+            // show player num
         }
     }
 
@@ -97,6 +109,14 @@ public class PlayerHand : MonoBehaviour
         if (myHand.Count < 4) drawCard();
         if (GetComponent<PlayerProperties>().level > 2 && myHand.Count < 4) drawCard();
         ready = false;
+    }
+
+    void triggerReady()
+    {
+        ready = true;
+        PlayManager.inst.readyPlayers++;
+
+        handImg.GetComponent<Image>().color = readyColor;
     }
 
     void drawCard()

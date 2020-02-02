@@ -161,6 +161,12 @@ MonoBehaviour:
   - {fileID: 7739004735884935934, guid: ac731ff304cf3a24b932a3a229bdcbc0, type: 3}
   - {fileID: 7475550650850172296, guid: 71f94723ef4f757439b61d38d720970e, type: 3}
   - {fileID: 1097211945476253840, guid: 17b9189f0f5563145910caa416ce554f, type: 3}
+  readyColor:
+    serializedVersion: 2
+    rgba: 1565771742
+  menuColor:
+    serializedVersion: 2
+    rgba: 1561805901
 --- !u!61 &5446047314987185412
 BoxCollider2D:
   m_ObjectHideFlags: 0

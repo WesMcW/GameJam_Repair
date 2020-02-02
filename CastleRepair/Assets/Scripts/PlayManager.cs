@@ -154,7 +154,7 @@ public class PlayManager : MonoBehaviour
             p.GetComponent<PlayerHand>().enabled = true;
             p.GetComponent<PlayerHand>().roundReset();
             p.GetComponent<PlayerProperties>().resetCards();
-            p.GetComponent<PlayerHand>().handImg.GetComponent<Image>().color = new Color32(0, 0, 0, 93);
+            p.GetComponent<PlayerHand>().handImg.GetComponent<Image>().color = p.GetComponent<PlayerHand>().menuColor;
         }
 
         inGame = false;
