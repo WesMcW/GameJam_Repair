@@ -78,13 +78,16 @@ public class PlayerHand : MonoBehaviour
 
     void useCard(int index)
     {
-        if (myHand.Count > index && !myHand[index].GetComponent<Card>().used)
+        if (myHand.Count > index)
         {
-            //myHand[index].GetComponent<Card>().setCardActive(gameObject);
-            myHand[index].GetComponent<Card>().used = true;
-            GetComponent<PlayerProperties>().equipCard(myHand[index].GetComponent<Card>());
-            activeCardCount++;
-            //myHand.RemoveAt(index);
+            if (!myHand[index].GetComponent<Card>().used)
+            {
+                //myHand[index].GetComponent<Card>().setCardActive(gameObject);
+                myHand[index].GetComponent<Card>().used = true;
+                GetComponent<PlayerProperties>().equipCard(myHand[index].GetComponent<Card>());
+                activeCardCount++;
+                //myHand.RemoveAt(index);
+            }
         }
     }
 
