@@ -6,6 +6,9 @@ public class StartRound : MonoBehaviour
 {
     public GameObject cardStage;
 
+    [SerializeField]
+    private AudioClip countdownSound;
+
     public void cardRound()
     {
         cardStage.SetActive(false);
@@ -20,6 +23,6 @@ public class StartRound : MonoBehaviour
     public void startCountDown()
     {
         //play countdown sound
-        AudioManager.instance.PlaySound(AudioManager.SoundClip.Countdown);
+        AudioManager.instance.soundPlayer.PlayOneShot(countdownSound);
     }
 }
