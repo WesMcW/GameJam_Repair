@@ -29,7 +29,7 @@ public class PlayerHand : MonoBehaviour
     //List<KeyCode> buttons;
 
     public GameObject[] buttonsUI;
-    public int highestButtonShown = 0;
+    public int highestButtonShown;
 
     void Start()
     {
@@ -47,6 +47,7 @@ public class PlayerHand : MonoBehaviour
         // update this as more cards added; this is how many of each card type is in deck
         myDeck = new int[14] { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
         foreach (int i in myDeck) totalCards += i;
+        highestButtonShown = -1;
         addManyCards(3);
     }
 
@@ -154,8 +155,8 @@ public class PlayerHand : MonoBehaviour
             myDeck[rand]--;
             totalCards--;
 
-            buttonsUI[highestButtonShown].SetActive(true);
             highestButtonShown++;
+            buttonsUI[highestButtonShown].SetActive(true);
         }
     }
 
