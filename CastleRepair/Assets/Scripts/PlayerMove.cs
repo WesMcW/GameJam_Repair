@@ -27,6 +27,9 @@ public class PlayerMove : MonoBehaviour {
 
     private string hor, vert, rotx, roty, a, b, x, y, shoot;
 
+    /// <summary>If the inversion is on, change this to -1</summary>
+    public int inversion = 1;
+
     [SerializeField]
     private GameObject knife;
 
@@ -103,8 +106,8 @@ public class PlayerMove : MonoBehaviour {
         if (isDead == false)
         {
             Turn();
-            float horizontal = Mathf.Round(Input.GetAxis(hor));
-            float vertical = Mathf.Round(Input.GetAxis(vert));
+            float horizontal = Mathf.Round(Input.GetAxis(hor) * inversion);
+            float vertical = Mathf.Round(Input.GetAxis(vert) * inversion);
 
             myRigidBody.velocity = new Vector2(horizontal * movementSpeed, myRigidBody.velocity.y);
             myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, vertical * movementSpeed);
@@ -129,8 +132,8 @@ public class PlayerMove : MonoBehaviour {
     /// </summary>
     private void Turn()
     {
-        float x = Input.GetAxis(rotx);
-        float y = Input.GetAxis(roty);
+        float x = Input.GetAxis(rotx) * inversion;
+        float y = Input.GetAxis(roty) * inversion;
        
         if (x != 0.0 || y != 0.0)
         {
