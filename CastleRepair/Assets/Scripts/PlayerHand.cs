@@ -118,6 +118,7 @@ public class PlayerHand : MonoBehaviour
     public void roundReset()
     {
         activeCardCount = 0;
+        cardsPicked.text = "Picks Left: " + maxCardCount;
         if (myHand.Count < 4) drawCard();
         if (GetComponent<PlayerProperties>().level > 2 && myHand.Count < 4) drawCard();
         ready = false;

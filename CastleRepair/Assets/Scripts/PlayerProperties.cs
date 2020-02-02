@@ -124,6 +124,7 @@ public class PlayerProperties : MonoBehaviour
                 level++;
                 xpToLevel *= 2;
                 GetComponent<PlayerHand>().maxCardCount++;
+                GetComponent<PlayerHand>().cardsPicked.text = "Picks Left: " + (GetComponent<PlayerHand>().maxCardCount - GetComponent<PlayerHand>().activeCardCount);
 
                 // level up stat boosts
                 GetComponent<PlayerMove>().movementSpeed += 1F;
