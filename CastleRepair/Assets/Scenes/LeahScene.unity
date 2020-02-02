@@ -6576,7 +6576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardStage: {fileID: 1234408566}
-  countdownSound: {fileID: 0}
+  countdownSound: {fileID: 8300000, guid: 5f84abf6a6fae224792d30800008eb18, type: 3}
 --- !u!1 &2004944246
 GameObject:
   m_ObjectHideFlags: 0

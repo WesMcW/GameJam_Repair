@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 4
-  knifeThrow: {fileID: 0}
-  knifeDeflect: {fileID: 0}
+  knifeThrow: {fileID: 8300000, guid: b21d08d8828dcc748a2560911f8bd339, type: 3}
+  knifeDeflect: {fileID: 8300000, guid: 557efc8c6fcb7fa4b8e64fedb08025ad, type: 3}
   movementSpeed: 0
   inversion: 1
   knife: {fileID: 9093957123481721042, guid: 09e4cf05a8abcac4283fae10219bb4a6, type: 3}
