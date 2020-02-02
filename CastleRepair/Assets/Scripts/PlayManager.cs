@@ -40,15 +40,23 @@ public class PlayManager : MonoBehaviour
         playerCount = PlayerPrefs.GetInt(PlayerPrefsPlayerCount);
 
         Players = new GameObject[PlayerPrefs.GetInt(PlayerPrefsPlayerCount)];
-        int j = 0;
+
         for (int i = 0; i < PlayerPrefs.GetInt(PlayerPrefsPlayerCount); i++)
         {
             GameObject temp = Instantiate(PlayerPrefabs[i]);
             Players[i] = temp;
-            if(i < 2) temp.GetComponent<PlayerHand>().handImg = CardScreen.transform.GetChild(j).GetChild(i).gameObject;
-            else temp.GetComponent<PlayerHand>().handImg = CardScreen.transform.GetChild(j + 1).GetChild(i - 2).gameObject;
+            if(i < 2) temp.GetComponent<PlayerHand>().handImg = CardScreen.transform.GetChild(0).GetChild(i).gameObject;
+            else temp.GetComponent<PlayerHand>().handImg = CardScreen.transform.GetChild(1).GetChild(i - 2).gameObject;
             temp.GetComponent<PlayerHand>().handImg.SetActive(true);
         }
+
+        if (playerCount == 3)
+        {
+            CardScreen.transform.GetChild(1).GetChild(1).gameObject.SetActive(true);
+            CardScreen.transform.GetChild(1).GetChild(1).GetComponent<Image>().enabled = false;
+            for (int i = 0; i < CardScreen.transform.GetChild(1).GetChild(1).childCount; i++) CardScreen.transform.GetChild(1).GetChild(1).GetChild(i).gameObject.SetActive(false);
+        }
+
         SetMap();
         handPhase = true;
     }
