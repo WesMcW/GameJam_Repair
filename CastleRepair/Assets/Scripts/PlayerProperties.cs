@@ -137,7 +137,8 @@ public class PlayerProperties : MonoBehaviour
             points--;
 
             // every 2 a piece is added
-            if (score % 4 == 1) updateCastle();
+            if (score == 1) repair();
+            else if (score % 4 == 1) updateCastle();
 
             // check for win
             PlayManager.inst.checkForWin(gameObject);
@@ -176,5 +177,10 @@ public class PlayerProperties : MonoBehaviour
         // increase castle state, change castle sprite
         castleState++;
         castle.sprite = castleSprites[castleState];
+    }
+
+    void repair()
+    {
+
     }
 }
