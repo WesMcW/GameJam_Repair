@@ -90,7 +90,7 @@ public class PlayerProperties : MonoBehaviour
     {
         foreach (Card a in active_cards)
         {
-            a.GetComponent<Card>().setCardActive(gameObject);
+            if(!a.isActive) a.GetComponent<Card>().setCardActive(gameObject);
             GetComponent<PlayerHand>().myHand.Remove(a.gameObject);
         }
     }
@@ -99,7 +99,7 @@ public class PlayerProperties : MonoBehaviour
     {
         foreach (Card a in active_cards)
         {
-            a.setCardUnactivate(gameObject);
+            if(a.isActive) a.setCardUnactivate(gameObject);
             Destroy(a.gameObject);
         }
 
