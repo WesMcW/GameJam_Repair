@@ -82,6 +82,15 @@ public class PlayerProperties : MonoBehaviour
         active_cards.Add(card);
     }
 
+    public void activateCards()
+    {
+        foreach (Card a in active_cards)
+        {
+            a.GetComponent<Card>().setCardActive(gameObject);
+            GetComponent<PlayerHand>().myHand.Remove(a.gameObject);
+        }
+    }
+
     public void resetCards()
     {
         foreach (Card a in active_cards)
@@ -107,6 +116,8 @@ public class PlayerProperties : MonoBehaviour
                 xpToLevel *= 2;
                 GetComponent<PlayerHand>().maxCardCount++;
                 points--;
+
+
             }
         }
     }
