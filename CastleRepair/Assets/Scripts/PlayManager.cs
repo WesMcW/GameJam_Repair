@@ -40,11 +40,13 @@ public class PlayManager : MonoBehaviour
         playerCount = PlayerPrefs.GetInt(PlayerPrefsPlayerCount);
 
         Players = new GameObject[PlayerPrefs.GetInt(PlayerPrefsPlayerCount)];
+        int j = 0;
         for (int i = 0; i < PlayerPrefs.GetInt(PlayerPrefsPlayerCount); i++)
         {
             GameObject temp = Instantiate(PlayerPrefabs[i]);
             Players[i] = temp;
-            temp.GetComponent<PlayerHand>().handImg = CardScreen.transform.GetChild(i).gameObject;
+            if(i < 2) temp.GetComponent<PlayerHand>().handImg = CardScreen.transform.GetChild(j).GetChild(i).gameObject;
+            else temp.GetComponent<PlayerHand>().handImg = CardScreen.transform.GetChild(j + 1).GetChild(i - 2).gameObject;
             temp.GetComponent<PlayerHand>().handImg.SetActive(true);
         }
         SetMap();
