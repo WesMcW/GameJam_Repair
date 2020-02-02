@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
 
     //public AudioClip countdown, gameTheme, deflect, knifeThrow, knifeThrowRock, battleTheme;
 
+    [Header("In this order: 0 = BattleTheme, 1 = Countdown, 2 = Deflection, 3 = KnifeHitRock, 4 = KnifeThrow, 5 = MainTheme")]
     [SerializeField]
     private AudioClip[] allSoundClips;
 
