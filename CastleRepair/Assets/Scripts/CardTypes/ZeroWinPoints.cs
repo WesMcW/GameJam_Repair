@@ -12,7 +12,10 @@ public class ZeroWinPoints : Card
 
     public override void setCardUnactivate(GameObject myPlayer)
     {
-        if (!GetComponent<PlayerProperties>().isDead && !PlayManager.inst.inGame) GetComponent<PlayerProperties>().points += PlayManager.inst.winPoints;
+        if (!GetComponent<PlayerProperties>().isDead && !PlayManager.inst.inGame)
+        {
+            GetComponent<PlayerProperties>().points += PlayManager.inst.winPoints;
+        }
         PlayManager.inst.noWinPoints = false;
         isActive = false;
     }

@@ -11,6 +11,11 @@ public abstract class Card : MonoBehaviour
     public string description; // The words on the card
     public string cardName; // Name of the card
 
+    private void Start()
+    {
+        used = false;
+    }
+
     public virtual void setCardActive(GameObject myPlayer)
     {
         // applies ability to player

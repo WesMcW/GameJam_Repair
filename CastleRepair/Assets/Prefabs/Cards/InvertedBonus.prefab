@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8263442380353254291}
   - component: {fileID: 5443206926845707615}
   - component: {fileID: 5660795311918013617}
+  - component: {fileID: 6196591981870428620}
   m_Layer: 0
   m_Name: InvertedBonus
   m_TagString: Untagged
@@ -76,6 +77,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6196591981870428620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571773176149134940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280010e86b06e6f47a57c5425b0b50e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
+  isActive: 0
+  isPermanent: 0
+  description: 
+  cardName: 
 --- !u!1 &846586058739904221
 GameObject:
   m_ObjectHideFlags: 0
