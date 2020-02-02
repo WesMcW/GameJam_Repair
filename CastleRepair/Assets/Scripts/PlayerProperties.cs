@@ -119,6 +119,7 @@ public class PlayerProperties : MonoBehaviour
             points--;
 
             // check for win
+            PlayManager.inst.checkForWin(gameObject);
         }
     }
 

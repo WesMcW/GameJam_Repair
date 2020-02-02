@@ -23,6 +23,7 @@ public class PlayManager : MonoBehaviour
     public GameObject[] Players;
     public GameObject CardScreen;
     public GameObject[] PlayerPrefabs;
+    public GameObject winScreen;
 
     private void Awake()
     {
@@ -96,6 +97,7 @@ public class PlayManager : MonoBehaviour
                         }
                     }
 
+                    checkForWin(null);
                     Invoke("NewGame", 3F);
                 }
                 else if(playersDead.Count == playerCount)
@@ -112,6 +114,7 @@ public class PlayManager : MonoBehaviour
                     playersDead[playerCount - 1].GetComponent<Animator>().SetFloat("Hor", 0);
                     playersDead[playerCount - 1].GetComponent<Animator>().SetFloat("Vert", 0);
 
+                    checkForWin(null);
                     Invoke("NewGame", 3F);
                 }
             }
@@ -189,5 +192,38 @@ public class PlayManager : MonoBehaviour
         }
 
         for (int i = 0; i < Players.Length; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
+    }
+
+    public void checkForWin(GameObject winner)
+    {
+        if (winner == null)
+        {
+            for (int i = 0; i < playerCount; i++)
+            {
+                if (Players[i].GetComponent<PlayerProperties>().score >= 10)
+                {
+                    CancelInvoke();
+                    foreach (GameObject p in Players) p.SetActive(false);
+                    winScreen.SetActive(true);
+                    winScreen.transform.GetChild(0).GetComponent<Text>().text = "Player " + i + " wins!";
+                    break;
+                }
+            }
+        }
+        else
+        {
+            if(winner.GetComponent<PlayerProperties>().score >= 10)
+            {
+                CancelInvoke();
+                int winID = -1;
+                for (int i = 0; i < playerCount; i++)
+                {
+                    if (Players[i] == winner) winID = i;
+                    Players[i].SetActive(false);
+                }
+                winScreen.SetActive(true);
+                winScreen.transform.GetChild(0).GetComponent<Text>().text = "Player " + winID + " wins!";
+            }
+        }
     }
 }
