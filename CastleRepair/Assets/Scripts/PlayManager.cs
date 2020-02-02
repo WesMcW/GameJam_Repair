@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayManager : MonoBehaviour
 {
@@ -211,7 +212,7 @@ public class PlayManager : MonoBehaviour
                     CancelInvoke();
                     foreach (GameObject p in Players) p.SetActive(false);
                     winScreen.SetActive(true);
-                    winScreen.transform.GetChild(0).GetComponent<Text>().text = "Player " + i + " wins!";
+                    winScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Player " + i + " wins!";
                     break;
                 }
             }
@@ -228,7 +229,7 @@ public class PlayManager : MonoBehaviour
                     Players[i].SetActive(false);
                 }
                 winScreen.SetActive(true);
-                winScreen.transform.GetChild(0).GetComponent<Text>().text = "Player " + winID + " wins!";
+                winScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Player " + winID + " wins!";
             }
         }
     }
