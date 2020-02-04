@@ -103,8 +103,11 @@ public class PlayerProperties : MonoBehaviour
             if(a.isActive) a.setCardUnactivate(gameObject);
             Destroy(a.gameObject);
 
-            GetComponent<PlayerHand>().buttonsUI[GetComponent<PlayerHand>().highestButtonShown].SetActive(false);
-            GetComponent<PlayerHand>().highestButtonShown--;
+            if (GetComponent<PlayerHand>().highestButtonShown < 4 && GetComponent<PlayerHand>().highestButtonShown > -1)
+            {
+                GetComponent<PlayerHand>().buttonsUI[GetComponent<PlayerHand>().highestButtonShown].SetActive(false);
+                GetComponent<PlayerHand>().highestButtonShown--;
+            }
         }
 
         active_cards = new List<Card>();
@@ -129,6 +132,8 @@ public class PlayerProperties : MonoBehaviour
                 // level up stat boosts
                 GetComponent<PlayerMove>().movementSpeed += 1F;
                 GetComponent<PlayerMove>().resetCD -= 0.05F;
+
+                if (level >= 5) PlayManager.inst.checkForWin(gameObject);
             }
         }
     }
@@ -168,6 +173,7 @@ public class PlayerProperties : MonoBehaviour
         GetComponent<Animator>().SetFloat("Hor", 0);
         GetComponent<Animator>().SetFloat("Vert", 0);
         GetComponent<PlayerMove>().enabled = false;
+        //if (transform.GetChild(2) != null) transform.GetChild(2).gameObject.SetActive(false);
 
         PlayManager.inst.playersDead.Add(gameObject);
 

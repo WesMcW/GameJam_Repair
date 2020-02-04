@@ -162,7 +162,7 @@ public class PlayerHand : MonoBehaviour
             totalCards--;
 
             highestButtonShown++;
-            buttonsUI[highestButtonShown].SetActive(true);
+            if(highestButtonShown < 4 && highestButtonShown > -1) buttonsUI[highestButtonShown].SetActive(true);
         }
     }
 

@@ -30,6 +30,10 @@ public class PlayManager : MonoBehaviour
 
     public Animator anim;
 
+    public TextMeshProUGUI roundPt;
+
+    float gameTime = 120F;
+
     private void Awake()
     {
         if (inst == null) inst = this;
@@ -92,6 +96,14 @@ public class PlayManager : MonoBehaviour
         {
             if (inGame)
             {
+                gameTime -= Time.deltaTime;
+                if(gameTime < 0)
+                {
+                    inGame = false;
+                    AudioManager.instance.ToggleBattle(false);
+                    NewGame();
+                }
+
                 // check for deaths + 1 == Players.Length, if so invoke new game and reset players -> GetComponent<PlayerHand>().enabled = true;
                 if (playersDead.Count + 1 == playerCount)
                 {
@@ -143,6 +155,8 @@ public class PlayManager : MonoBehaviour
 
     public void NewGame()
     {
+        gameTime = 120F;
+
         if(currentMap != -1) for (int i = 0; i < Players.Length; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
         playersDead = new List<GameObject>();
 
@@ -206,6 +220,7 @@ public class PlayManager : MonoBehaviour
 
         winPoints = Random.Range(1, 4);
         Debug.Log("Win points this match: " + winPoints);
+        roundPt.text = "Round Points: " + winPoints;
 
         // place players in their spawnpoints
         for (int i = 0; i < Players.Length; i++)
@@ -217,7 +232,7 @@ public class PlayManager : MonoBehaviour
             Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[rand] = true;
         }
 
-        //for (int i = 0; i < Players.Length; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
+        for (int i = 0; i < 4; i++) Maps[currentMap].GetComponent<MapPlayerSpawns>().isUsed[i] = false;
     }
 
     public void checkForWin(GameObject winner)
@@ -226,8 +241,10 @@ public class PlayManager : MonoBehaviour
         {
             for (int i = 0; i < playerCount; i++)
             {
-                if (Players[i].GetComponent<PlayerProperties>().score >= 20)
+                if (Players[i].GetComponent<PlayerProperties>().score >= 20 || Players[i].GetComponent<PlayerProperties>().level >= 5)
                 {
+                    inGame = handPhase = false;
+
                     CancelInvoke();
                     foreach (GameObject p in Players) p.SetActive(false);
                     winScreen.SetActive(true);
@@ -238,8 +255,10 @@ public class PlayManager : MonoBehaviour
         }
         else
         {
-            if(winner.GetComponent<PlayerProperties>().score >= 20)
+            if(winner.GetComponent<PlayerProperties>().score >= 20 || winner.GetComponent<PlayerProperties>().level >= 5)
             {
+                inGame = handPhase = false;
+
                 CancelInvoke();
                 int winID = -1;
                 for (int i = 0; i < playerCount; i++)
