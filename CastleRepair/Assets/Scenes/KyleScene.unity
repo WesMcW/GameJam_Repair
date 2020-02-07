@@ -1123,6 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionMenu: {fileID: 439263296}
+  backBtn: {fileID: 626568672}
 --- !u!114 &458138295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,6 +1148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9aa2c1b39ac314a9e7bcae21bc1fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playBtn: {fileID: 1819907690}
+  optBtn: {fileID: 315656508}
+  exitBtn: {fileID: 1135064695}
 --- !u!114 &458138297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,7 +1197,7 @@ RectTransform:
   m_Children:
   - {fileID: 1388271301}
   m_Father: {fileID: 883194601}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1997,7 +2001,7 @@ RectTransform:
   m_Children:
   - {fileID: 1307732945}
   m_Father: {fileID: 883194601}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2105,6 +2109,7 @@ GameObject:
   - component: {fileID: 883194601}
   - component: {fileID: 883194603}
   - component: {fileID: 883194602}
+  - component: {fileID: 883194604}
   m_Layer: 5
   m_Name: PlayerCount
   m_TagString: Untagged
@@ -2123,9 +2128,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1967641259}
   - {fileID: 507687667}
   - {fileID: 742336495}
-  - {fileID: 1967641259}
   - {fileID: 108861251}
   - {fileID: 1875249451}
   - {fileID: 543032635}
@@ -2174,6 +2179,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883194600}
   m_CullTransparentMesh: 0
+--- !u!114 &883194604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883194600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991c0451b3c10ed4fad285a0e66cc62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countSlider: {fileID: 1967641260}
+  playBtn: {fileID: 507687668}
+  backBtn: {fileID: 742336496}
 --- !u!1 &884227070
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,7 +4237,7 @@ RectTransform:
   - {fileID: 327853907}
   - {fileID: 1390924025}
   m_Father: {fileID: 883194601}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
