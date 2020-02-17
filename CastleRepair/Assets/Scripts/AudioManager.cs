@@ -64,6 +64,7 @@ public class AudioManager : MonoBehaviour
             musicPlayer.clip = snowTheme;
             musicPlayer.Play();
         }
+        musicPlayer.loop = true;
     }
 
     public void PlayDink()

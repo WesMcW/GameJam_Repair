@@ -31,6 +31,7 @@ public class PlayManager : MonoBehaviour
     public Animator anim;
 
     public TextMeshProUGUI roundPt;
+    public TextMeshProUGUI timeTxt;
 
     float gameTime = 120F;
 
@@ -97,6 +98,7 @@ public class PlayManager : MonoBehaviour
             if (inGame)
             {
                 gameTime -= Time.deltaTime;
+                timeTxt.text = Mathf.RoundToInt(gameTime).ToString();
                 if(gameTime < 0)
                 {
                     inGame = false;
@@ -165,6 +167,7 @@ public class PlayManager : MonoBehaviour
             p.GetComponent<Animator>().SetFloat("Hor", 0);
             p.GetComponent<Animator>().SetFloat("Vert", 0);
             p.GetComponent<PlayerMove>().enabled = false;
+            p.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             p.GetComponent<PlayerHand>().enabled = true;
             p.GetComponent<PlayerProperties>().resetCards();
             p.GetComponent<PlayerHand>().roundReset();
