@@ -168,7 +168,7 @@ public class PlayerMove : MonoBehaviour {
                 if (!cooldown && !dashing) // if not on cooldown, and not currently dashing
                 {
                     dashing = true; // then begin dashing
-                    movementSpeed = 42;
+                    movementSpeed = 25;
 
                 }
                 else if (dashing) // if already dashing
@@ -191,8 +191,9 @@ public class PlayerMove : MonoBehaviour {
 
                 }
 
-            }// else ignore this
+            }// End if
         }
+        movementSpeed = temp;
     }
 
 
